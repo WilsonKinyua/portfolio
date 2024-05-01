@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider"
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import 'animate.css';
 import "../styles/globals.scss";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/navbar";
@@ -27,7 +28,6 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          // enableSystem
           disableTransitionOnChange
         >
           <Cursor />
