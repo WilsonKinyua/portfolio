@@ -33,7 +33,7 @@ export default function Navbar() {
                 />
             </Link>
             <NavigationMenu>
-                <NavigationMenuList className="hidden md:flex">
+                <NavigationMenuList className="hidden lg:flex">
                     <NavigationMenuItem>
                         <Link href="/" legacyBehavior passHref>
                             <NavigationMenuLink
@@ -87,14 +87,14 @@ export default function Navbar() {
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                         <Button
-                            className="bg-primary text-white font-semibold"
+                            className="font-semibold"
                         >
                             Hire Me
                         </Button>
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
-            <div className="md:hidden flex">
+            <div className="lg:hidden flex">
                 <Sheet>
                     <SheetTrigger>
                         <Menu

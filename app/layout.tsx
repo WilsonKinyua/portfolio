@@ -1,10 +1,11 @@
 import { ThemeProvider } from "@/components/theme-provider"
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "../styles/globals.scss";
 import { cn } from "@/lib/utils";
+import Navbar from "@/components/navbar";
 
-const poppins = Poppins({ weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"], subsets: ["latin"] });
+const montserrat = Montserrat({ weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Wilson Kinyua | Software Engineer",
@@ -20,15 +21,18 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body
-        className={cn(poppins.className)}
+        className={cn(montserrat.className)}
       >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          enableSystem
+          // enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <main className="container mx-auto">
+            <Navbar />
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>
