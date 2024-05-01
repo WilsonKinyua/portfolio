@@ -11,7 +11,6 @@ import {
     SheetContent,
     SheetDescription,
     SheetHeader,
-    SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
 import Image from "next/image"
@@ -20,6 +19,7 @@ import { Button } from "./ui/button"
 import { usePathname } from "next/navigation"
 import { Menu } from "lucide-react"
 import { Separator } from "./ui/separator"
+import SocialLinks from "./social-links"
 export default function Navbar() {
     const pathname = usePathname()
     return (
@@ -104,20 +104,20 @@ export default function Navbar() {
                     </SheetTrigger>
                     <SheetContent
                         side="left"
-                        className="bg-[#131313]"
+                        className="bg-secondary overflow-auto"
                     >
                         <SheetHeader>
                             <SheetDescription
                                 className="my-10"
                             >
                                 <p className="leading-8">
-                                    Driven, innovative Software Engineer with experience in the development of software and solutions. A conscientious person who pays attention to details.
+                                    Driven, innovative Software Engineer with more than 5 years of experience in the development of software and solutions. A conscientious person who pays attention to details.
                                 </p>
                                 <Separator
                                     className="my-10"
                                 />
                                 <ul
-                                    className="grid grid-cols-3 gap-5"
+                                    className="grid grid-cols-3 gap-5 font-semibold"
                                 >
                                     <li>
                                         <Link
@@ -178,12 +178,13 @@ export default function Navbar() {
                                 <Separator
                                     className="my-10"
                                 />
-
+                                <p className="uppercase mb-5">Find me</p>
+                                <SocialLinks />
                                 <Separator
                                     className="my-10"
                                 />
                                 <Button
-                                    className="bg-primary text-white font-semibold w-full my-10"
+                                    className="bg-primary text-white font-semibold w-full"
                                 >
                                     Hire Me
                                 </Button>
