@@ -19,7 +19,7 @@ export default function SocialLinks() {
                             >
                                 <Github
                                     size={24}
-                                    className="bg-icon rounded-md h-10 w-10 p-2 text-primary hover:bg-primary hover:text-white transition duration-500"
+                                    className="bg-icon rounded-md h-10 w-10 p-2 text-primary hover:bg-primary hover:text-white transition duration-500 hover:-translate-y-2"
                                 />
                             </a>
                         </TooltipTrigger>
@@ -39,7 +39,7 @@ export default function SocialLinks() {
                             >
                                 <Linkedin
                                     size={24}
-                                    className="bg-icon rounded-md h-10 w-10 p-2 text-primary hover:bg-primary hover:text-white transition duration-500"
+                                    className="bg-icon rounded-md h-10 w-10 p-2 text-primary hover:bg-primary hover:text-white transition duration-500 hover:-translate-y-2"
                                 />
                             </a>
                         </TooltipTrigger>
@@ -59,7 +59,7 @@ export default function SocialLinks() {
                             >
                                 <Twitter
                                     size={24}
-                                    className="bg-icon rounded-md h-10 w-10 p-2 text-primary hover:bg-primary hover:text-white transition duration-500"
+                                    className="bg-icon rounded-md h-10 w-10 p-2 text-primary hover:bg-primary hover:text-white transition duration-500 hover:-translate-y-2"
                                 />
                             </a>
                         </TooltipTrigger>
@@ -79,7 +79,7 @@ export default function SocialLinks() {
                             >
                                 <Figma
                                     size={24}
-                                    className="bg-icon rounded-md h-10 w-10 p-2 text-primary hover:bg-primary hover:text-white transition duration-500"
+                                    className="bg-icon rounded-md h-10 w-10 p-2 text-primary hover:bg-primary hover:text-white transition duration-500 hover:-translate-y-2"
                                 />
                             </a>
                         </TooltipTrigger>
@@ -99,7 +99,7 @@ export default function SocialLinks() {
                             >
                                 <Mail
                                     size={24}
-                                    className="bg-icon rounded-md h-10 w-10 p-2 text-primary hover:bg-primary hover:text-white transition duration-500"
+                                    className="bg-icon rounded-md h-10 w-10 p-2 text-primary hover:bg-primary hover:text-white transition duration-500 hover:-translate-y-2"
                                 />
                             </a>
                         </TooltipTrigger>
