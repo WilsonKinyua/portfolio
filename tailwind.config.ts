@@ -27,7 +27,7 @@ const config = {
         icon: "#1E1E1E",
         primary: {
           DEFAULT: "#FF014F",
-          foreground: "hsl(var(--primary-foreground))",
+          foreground: "#1E1E1E",
         },
         secondary: {
           DEFAULT: "#131313",

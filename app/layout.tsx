@@ -5,7 +5,7 @@ import 'animate.css';
 import "../styles/globals.scss";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/navbar";
-import Cursor from "@/components/Cursor";
+import Cursor from "@/components/cursor";
 
 const montserrat = Montserrat({ weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"], subsets: ["latin"] });
 
