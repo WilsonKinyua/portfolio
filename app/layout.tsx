@@ -4,6 +4,7 @@ import { Montserrat } from "next/font/google";
 import "../styles/globals.scss";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/navbar";
+import Cursor from "@/components/Cursor";
 
 const montserrat = Montserrat({ weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"], subsets: ["latin"] });
 
@@ -29,6 +30,7 @@ export default function RootLayout({
           // enableSystem
           disableTransitionOnChange
         >
+          <Cursor />
           <main className="container mx-auto">
             <Navbar />
             {children}
