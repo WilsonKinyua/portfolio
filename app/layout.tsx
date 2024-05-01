@@ -1,7 +1,7 @@
-import { ThemeProvider } from "@/components/theme-provider"
 import type { Metadata } from "next";
+import { ThemeProvider } from "@/components/theme-provider"
 import { Montserrat } from "next/font/google";
-import 'animate.css';
+import 'aos/dist/aos.css';
 import "../styles/globals.scss";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/navbar";

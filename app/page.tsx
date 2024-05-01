@@ -1,13 +1,19 @@
 "use client"
+import AOS from 'aos';
 import SocialLinks from "@/components/social-links";
 import { Button } from "@/components/ui/button";
-import { Check, CircleCheck } from "lucide-react";
+import { CircleCheck } from "lucide-react";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 
 var ReactRotatingText = require('react-rotating-text');
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
   return (
     <React.Fragment>
       {/* intro */}
@@ -53,15 +59,20 @@ export default function Home() {
         />
       </section>
       {/* about me */}
-      <section className="grid lg:grid-cols-2 grid-cols-1 items-center gap-20 lg:my-20 my-5">
+      <section
+        className="grid lg:grid-cols-2 grid-cols-1 items-center gap-20 lg:my-20 my-5"
+      >
         <Image
           src="/img/me-2.svg"
           alt="About Wilson Kinyua"
           width={500}
           height={500}
           className="w-full h-full rounded-lg border-t-4 border-b-4 border-primary-foreground transition duration-500 hover:border-primary shadow-2xl"
+          data-aos="fade-up"
         />
-        <div>
+        <div
+          data-aos="fade-up"
+        >
           <p className="text-sm uppercase font-semibold tracking-wide">
             About Me
           </p>
