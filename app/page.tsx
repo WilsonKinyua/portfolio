@@ -1,7 +1,10 @@
+"use client"
 import SocialLinks from "@/components/social-links";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
+
+var ReactRotatingText = require('react-rotating-text');
 
 export default function Home() {
   return (
@@ -16,7 +19,7 @@ export default function Home() {
               <span className="text-primary">Wilson</span> Kinyua
             </h1>
             <p className="lg:text-4xl text-xl text-primary font-semibold tracking-wide">
-              Software Engineer
+              <ReactRotatingText items={['Software Engineer', 'Web developer', 'Frontend Developer', 'Backend Developer', 'Mobile apps Developer', 'UI/UX designer', 'Tech enthusiast']} />
             </p>
             <p className="lg:my-10 my-5">
               From Nairobi, Kenya. I have more that <span className="text-primary">5 years</span> experience

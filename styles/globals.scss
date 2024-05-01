@@ -73,5 +73,19 @@
 
   body {
     @apply text-foreground;
+    background-image: repeating-linear-gradient(to right, #1d1d1d, #1d1d1d 0.5px, transparent 0.5px, transparent);
+    background-size: 100px 100px;
+    background-color: rgba(0, 0, 0, 0);
+    animation: movingBackground 60s linear infinite;
+  }
+
+  @keyframes movingBackground {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: 100% 0;
+    }
   }
 }

@@ -29,7 +29,7 @@ export default function RootLayout({
           // enableSystem
           disableTransitionOnChange
         >
-          <main className="container mx-auto bg-[url('/img/bg-body.svg')] bg-cover bg-no-repeat bg-center">
+          <main className="container mx-auto">
             <Navbar />
             {children}
           </main>
