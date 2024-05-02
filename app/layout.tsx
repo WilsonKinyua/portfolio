@@ -7,6 +7,7 @@ import "../styles/globals.scss";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/navbar";
 import MouseCustomCursor from "@/components/mouse-custom-cursor";
+import { Toaster } from "@/components/ui/toaster"
 
 const montserrat = Montserrat({ weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"], subsets: ["latin"] });
 
@@ -37,7 +38,9 @@ export default function RootLayout({
             {children}
           </main>
         </ThemeProvider>
-        <Analytics/>
+        <Analytics />
+        <Toaster
+        />
       </body>
     </html>
   );
