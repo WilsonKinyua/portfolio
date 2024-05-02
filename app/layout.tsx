@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 import "../styles/globals.scss";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/navbar";
-import Cursor from "@/components/cursor";
+import MouseCustomCursor from "@/components/mouse-custom-cursor";
 
 const montserrat = Montserrat({ weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"], subsets: ["latin"] });
 
@@ -30,7 +30,7 @@ export default function RootLayout({
           defaultTheme="dark"
           disableTransitionOnChange
         >
-          <Cursor />
+          <MouseCustomCursor />
           <main className="container mx-auto">
             <Navbar />
             {children}

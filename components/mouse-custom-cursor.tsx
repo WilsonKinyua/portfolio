@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 
-export default function Cursor() {
+export default function MouseCustomCursor() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [hidden, setHidden] = useState(true); // Start with the cursor hidden
 
