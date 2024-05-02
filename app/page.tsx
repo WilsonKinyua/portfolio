@@ -2,11 +2,12 @@
 import AOS from 'aos';
 import SocialLinks from "@/components/social-links";
 import { Button } from "@/components/ui/button";
-import { CircleCheck } from "lucide-react";
+import { ChevronRight, CircleCheck } from "lucide-react";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import Skills from '@/components/skills';
 import Services from '@/components/services';
+import Projects from '@/components/projects';
 
 var ReactRotatingText = require('react-rotating-text');
 
@@ -131,11 +132,26 @@ export default function Home() {
         </div>
       </section>
       {/* Latest Works */}
-      <section className="my-20" data-aos="fade-up">
-        <p className="text-sm uppercase font-semibold tracking-wide text-center">Latest Works</p>
-        <h4 className='text-center capitalize lg:text-4xl text-2xl my-5'>
-          Explore My Popular <span className="text-primary">Projects</span>
-        </h4>
+      <section className="my-20">
+        <div data-aos="fade-up">
+          <p className="text-sm uppercase font-semibold tracking-wide text-center">Latest Works</p>
+          <h4 className='text-center capitalize lg:text-4xl text-2xl my-5'>
+            Explore My Popular <span className="text-primary">Projects</span>
+          </h4>
+        </div>
+        <Projects />
+        <a
+          href="https://github.com/Wilsonkinyua"
+          className="flex justify-center my-10"
+          target='_blank'
+        >
+          <Button
+            variant={"default"}
+            className="lg:w-auto w-full"
+          >
+            View All Projects <ChevronRight className="ml-3" />
+          </Button>
+        </a>
       </section>
     </React.Fragment>
   );
