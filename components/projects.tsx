@@ -52,9 +52,7 @@ export default function Projects() {
         },
     ]
     useEffect(() => {
-        AOS.init({
-            duration: 1000,
-        });
+        AOS.init({});
     }, []);
     return (
         <>

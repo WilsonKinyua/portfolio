@@ -1,21 +1,22 @@
 "use client"
 import AOS from 'aos';
+import { Input } from "@/components/ui/input"
 import SocialLinks from "@/components/social-links";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, CircleCheck } from "lucide-react";
+import { ChevronRight, CircleCheck, Send } from "lucide-react";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import Skills from '@/components/skills';
 import Services from '@/components/services';
 import Projects from '@/components/projects';
+import { Label } from "@/components/ui/label"
+import { Textarea } from "@/components/ui/textarea"
 
 var ReactRotatingText = require('react-rotating-text');
 
 export default function Home() {
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-    });
+    AOS.init({});
   }, []);
   return (
     <React.Fragment>
@@ -152,6 +153,96 @@ export default function Home() {
             View All Projects <ChevronRight className="ml-3" />
           </Button>
         </a>
+      </section>
+      {/* contact form */}
+      <section
+      // data-aos="fade-up"
+      >
+        <div
+          className='grid lg:grid-cols-2 grid-cols-1 gap-20 my-20'
+        >
+          <div>
+            <p className="text-sm uppercase font-semibold tracking-wide">
+              Get In Touch
+            </p>
+            <h4 className='lg:text-4xl text-2xl my-5'>
+              Let's Talk For your <span className="text-primary">Next Project(s)</span>
+            </h4>
+            <p className="leading-10 my-5">
+              Discuss a project or just want to say hi? Connect with me via email or through a phone call.
+            </p>
+            <ul className="space-y-4 mb-10">
+              <li className="flex">
+                <CircleCheck className="text-primary mr-3" /> 5+ Years of Experience
+              </li>
+              <li className="flex">
+                <CircleCheck className="text-primary mr-3" /> Professional Web Designer
+              </li>
+              <li className="flex">
+                <CircleCheck className="text-primary mr-3" /> Mobile Apps Development
+              </li>
+              <li className="flex">
+                <CircleCheck className="text-primary mr-3" /> Technical Mentorship
+              </li>
+              <li className="flex">
+                <CircleCheck className="text-primary mr-3" /> Fullstack Developer
+              </li>
+            </ul>
+            <SocialLinks />
+          </div>
+          <div>
+            <form>
+              <div className="grid lg:grid-cols-2 gap-5">
+                <div className='space-y-4'>
+                  <Label htmlFor="fullName" className='font-semibold'>Full Name{" "}<span className="text-primary">*</span></Label>
+                  <Input
+                    id="fullName"
+                    type="text"
+                    placeholder="Tery Humfy D. Tawez"
+                  />
+                </div>
+                <div className='space-y-4'>
+                  <Label htmlFor="emailAddress" className='font-semibold'>Email Address{" "}<span className="text-primary">*</span></Label>
+                  <Input
+                    id="emailAddress"
+                    type="email"
+                    placeholder="tery@humfy.com"
+                  />
+                </div>
+                <div className='space-y-4'>
+                  <Label htmlFor="phoneNumber" className='font-semibold'>Phone Number</Label>
+                  <Input
+                    id="phoneNumber"
+                    type="tel"
+                    placeholder="+254 712 345 678"
+                  />
+                </div>
+                <div className='space-y-4'>
+                  <Label htmlFor="subject" className='font-semibold'>Subject</Label>
+                  <Input
+                    id="subject"
+                    type="text"
+                    placeholder="I have a project for you"
+                  />
+                </div>
+              </div>
+              <div className='space-y-4 mt-4'>
+                <Label htmlFor="message" className='font-semibold'>Message{" "}<span className="text-primary">*</span></Label>
+                <Textarea
+                  id="message"
+                  placeholder="Write your message..."
+                />
+              </div>
+              <Button
+                variant={"default"}
+                className="lg:w-auto w-full mt-10"
+                type='submit'
+              >
+                Send Message <Send size={18} className="ml-2" />
+              </Button>
+            </form>
+          </div>
+        </div>
       </section>
     </React.Fragment>
   );
