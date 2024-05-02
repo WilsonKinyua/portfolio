@@ -2,9 +2,17 @@
 import AOS from 'aos';
 import SocialLinks from "@/components/social-links";
 import { Button } from "@/components/ui/button";
-import { CircleCheck } from "lucide-react";
+import { CircleCheck, Code, Component, Globe, Phone, TabletSmartphone, Users, Wallet } from "lucide-react";
 import Image from "next/image";
 import React, { useEffect } from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 
 var ReactRotatingText = require('react-rotating-text');
 
@@ -108,6 +116,134 @@ export default function Home() {
             </li>
           </ul>
           <SocialLinks />
+        </div>
+      </section>
+      {/* services */}
+      <section className="my-20" data-aos="fade-up">
+        <p className="text-sm uppercase font-semibold tracking-wide text-center">I like to make things easy and fun</p>
+        <h4 className='text-center lg:text-4xl text-2xl my-5'>
+          My <span className="text-primary">Special Services</span> For your <br className="lg:block hidden" /> Business <span className="text-primary">Development</span>
+        </h4>
+        <div className="grid lg:grid-cols-3 grid-cols-1 gap-5 my-10">
+          <Card className='text-center'>
+            <CardHeader>
+              <CardTitle>
+                <Globe
+                  size={40}
+                  className="text-primary mx-auto"
+                />
+              </CardTitle>
+              <CardDescription
+                className="text-white uppercase font-bold pt-5"
+              >
+                Web Development
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              Modern and mobile-ready website
+              that will help you reach all of your
+              marketing.
+            </CardContent>
+          </Card>
+          <Card className='text-center'>
+            <CardHeader>
+              <CardTitle>
+                <Component
+                  size={40}
+                  className="text-primary mx-auto"
+                />
+              </CardTitle>
+              <CardDescription
+                className="text-white uppercase font-bold pt-5"
+              >
+                UI/UX Design
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              Create intuitive interfaces and
+              delightful user experiences by blending
+              aesthetics with usability.
+            </CardContent>
+          </Card>
+          <Card className='text-center'>
+            <CardHeader>
+              <CardTitle>
+                <TabletSmartphone
+                  size={40}
+                  className="text-primary mx-auto"
+                />
+              </CardTitle>
+              <CardDescription
+                className="text-white uppercase font-bold pt-5"
+              >
+                APP DEVELOPMENT
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              Modern and mobile-ready application
+              that will help you reach all
+              of your marketing.
+            </CardContent>
+          </Card>
+          <Card className='text-center'>
+            <CardHeader>
+              <CardTitle>
+                <Code
+                  size={40}
+                  className="text-primary mx-auto"
+                />
+              </CardTitle>
+              <CardDescription
+                className="text-white uppercase font-bold pt-5"
+              >
+                API design / Integration
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              Developing a highly secure,
+              fast and scalable APIs both
+              REST and GraphQL.
+            </CardContent>
+          </Card>
+          <Card className='text-center'>
+            <CardHeader>
+              <CardTitle>
+                <Wallet
+                  size={40}
+                  className="text-primary mx-auto"
+                />
+              </CardTitle>
+              <CardDescription
+                className="text-white uppercase font-bold pt-5"
+              >
+                Payment Integration
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              Automate the process of payments
+              to allow users pay right on your platform
+            </CardContent>
+          </Card>
+          <Card className='text-center'>
+            <CardHeader>
+              <CardTitle>
+                <Users
+                  size={40}
+                  className="text-primary mx-auto"
+                />
+              </CardTitle>
+              <CardDescription
+                className="text-white uppercase font-bold pt-5"
+              >
+                Mentorship
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              Finds great joy in sharing my knowledge
+              with others. As a technical mentor this
+              allows me to give back to the community.
+            </CardContent>
+          </Card>
         </div>
       </section>
     </React.Fragment>
