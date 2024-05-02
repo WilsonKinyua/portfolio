@@ -23,7 +23,7 @@ export default function Home() {
       <section className="grid lg:grid-cols-2 grid-cols-1 items-center lg:text-left text-center">
         <div className="lg:order-1 order-2 lg:my-0 my-10">
           <p className="text-sm uppercase font-semibold tracking-wide">
-            HELLO, I'M
+            HELLO, I&apos;M
           </p>
           <h1 className="lg:text-5xl text-2xl font-black tracking-[0.1rem] lg:my-5 my-2">
             <span className="text-primary">Wilson</span> Kinyua
