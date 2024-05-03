@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useState, useTransition } from "react";
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { toast } from "@/components/ui/use-toast"
 import { Button } from "../ui/button";
-import { Send } from "lucide-react";
+import { Loader, Send } from "lucide-react";
+import sendEmail from "@/lib/actions";
 export default function Contact() {
+    const [transition, startTransition] = useTransition();
     const [formState, setFormState] = useState({
         fullName: '',
         emailAddress: '',
@@ -45,10 +47,33 @@ export default function Contact() {
                     return false;
                 }
 
-                toast({
-                    title: "Message Sent",
-                    description: "Thank you for reaching out to me. I will get back to you as soon as possible.",
-                })
+                startTransition(async () => {
+                    const sendNotification = await sendEmail(formState.fullName, formState.emailAddress, formState.message, formState.subject, formState.phoneNumber);
+                    if (sendNotification.error) {
+                        toast({
+                            title: "Error",
+                            description: "An error occurred while sending your message. Please try again later.",
+                            variant: "destructive",
+                        });
+                        return;
+                    }
+                    setFormState({
+                        fullName: '',
+                        emailAddress: '',
+                        phoneNumber: '',
+                        subject: '',
+                        message: '',
+                    });
+                    setError({
+                        fullName: false,
+                        emailAddress: false,
+                        message: false,
+                    });
+                    toast({
+                        title: "Message Sent",
+                        description: "Thank you for reaching out to me. I will get back to you as soon as possible.",
+                    })
+                });
             }}
         >
             <div className="grid lg:grid-cols-2 gap-5">
@@ -62,6 +87,8 @@ export default function Contact() {
                             setFormState({ ...formState, fullName: e.target.value });
                         }}
                         className={error.fullName ? 'border-primary' : ''}
+                        value={formState.fullName}
+                        disabled={transition}
                     />
                     {error.fullName && <p className="text-primary text-sm">Please fill in your full name</p>}
                 </div>
@@ -75,6 +102,8 @@ export default function Contact() {
                             setFormState({ ...formState, emailAddress: e.target.value });
                         }}
                         className={error.emailAddress ? 'border-primary' : ''}
+                        value={formState.emailAddress}
+                        disabled={transition}
                     />
                     {error.emailAddress && <p className="text-primary text-sm">Please fill in your email address</p>}
                 </div>
@@ -87,6 +116,8 @@ export default function Contact() {
                         onChange={(e) => {
                             setFormState({ ...formState, phoneNumber: e.target.value });
                         }}
+                        value={formState.phoneNumber}
+                        disabled={transition}
                     />
                 </div>
                 <div className='space-y-4'>
@@ -98,6 +129,8 @@ export default function Contact() {
                         onChange={(e) => {
                             setFormState({ ...formState, subject: e.target.value });
                         }}
+                        value={formState.subject}
+                        disabled={transition}
                     />
                 </div>
             </div>
@@ -110,6 +143,8 @@ export default function Contact() {
                         setFormState({ ...formState, message: e.target.value });
                     }}
                     className={error.message ? 'border-primary' : ''}
+                    value={formState.message}
+                    disabled={transition}
                 />
                 {error.message && <p className="text-primary text-sm">Please fill in your message</p>}
             </div>
@@ -117,8 +152,9 @@ export default function Contact() {
                 variant={"default"}
                 className="lg:w-auto w-full mt-10"
                 type='submit'
+                disabled={transition}
             >
-                Send Message <Send size={18} className="ml-2" />
+                Send Message {!transition && <Send size={18} className="ml-2" />} {transition && <Loader size={20} className="animate-spin ml-2" />}
             </Button>
         </form>
     )

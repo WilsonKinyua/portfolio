@@ -42,6 +42,9 @@ export default function Home() {
             <Button
               variant={"default"}
               className="lg:w-auto w-full"
+              onClick={() => {
+                window.open('https://drive.google.com/file/d/1ULybJIrMYilUrdxzONjkiPeswp4mD0N7/view?usp=sharing', '_blank');
+              }}
             >
               Download Resume
             </Button>
