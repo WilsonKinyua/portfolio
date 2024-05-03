@@ -153,9 +153,7 @@ export default function Home() {
         </a>
       </section>
       {/* contact form */}
-      <section
-        data-aos="fade-up"
-      >
+      <section>
         <div
           className='grid lg:grid-cols-2 grid-cols-1 gap-20 my-20'
         >
