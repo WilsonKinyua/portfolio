@@ -113,7 +113,7 @@ export default function Navbar() {
                                             className="my-10"
                                         >
                                             <p className="leading-8">
-                                                Have a project you'd like to discuss? I'd love to hear from you.
+                                                Have a project you&apos;d like to discuss? I&apos;d love to hear from you.
                                             </p>
                                             <Hire />
                                             <Separator
