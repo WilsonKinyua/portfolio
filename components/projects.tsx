@@ -1,5 +1,4 @@
 "use client"
-import AOS from 'aos';
 import {
     Card,
     CardDescription,
@@ -65,9 +64,6 @@ export default function Projects() {
             imagePosition: 'right',
         },
     ]
-    useEffect(() => {
-        AOS.init({});
-    }, []);
     return (
         <>
             {projects.map((project, index) => (

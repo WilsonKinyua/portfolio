@@ -9,6 +9,7 @@ import Skills from '@/components/skills';
 import Services from '@/components/services';
 import Projects from '@/components/projects';
 import Contact from '@/components/contact';
+import Experience from '@/components/experience';
 
 var ReactRotatingText = require('react-rotating-text');
 
@@ -123,6 +124,16 @@ export default function Home() {
           My <span className="text-primary">Special Services</span> For your <br className="lg:block hidden" /> Business <span className="text-primary">Development</span>
         </h4>
         <Services />
+      </section>
+      {/* experiences/education */}
+      <section className="my-20" data-aos="fade-up">
+        <p className="text-sm uppercase font-semibold tracking-wide text-center">My <span className="text-primary">Resume</span></p>
+        <h4 className='text-center capitalize lg:text-4xl text-2xl my-5'>
+          Real <span className="text-primary">Problem Solutions</span> Experience
+        </h4>
+        <div className="my-10">
+          <Experience />
+        </div>
       </section>
       {/* professional skills */}
       <section className="my-20" data-aos="fade-up">
