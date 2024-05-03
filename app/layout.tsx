@@ -32,8 +32,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <MouseCustomCursor />
+          <Navbar />
           <main className="container mx-auto">
-            <Navbar />
             {children}
           </main>
           <Footer />
