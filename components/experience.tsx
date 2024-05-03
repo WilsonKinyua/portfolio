@@ -4,12 +4,12 @@ import {
     CardHeader,
 } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { LampDesk, Laptop, Phone, School, Sun, Warehouse } from "lucide-react"
+import { LampDesk, Laptop, Phone, School, Sun, University, Warehouse } from "lucide-react"
 import { Separator } from "./ui/separator"
 export default function Experience() {
     return (
         <Tabs defaultValue="experience" className="w-full">
-            <TabsList className="flex justify-between py-10">
+            <TabsList className="flex justify-between lg:py-10 py-4">
                 <TabsTrigger value="experience">Experience</TabsTrigger>
                 <TabsTrigger value="education">Education</TabsTrigger>
             </TabsList>
@@ -24,8 +24,8 @@ export default function Experience() {
                                 <Card className={`card-glassmorphism p-2`}>
                                     <CardHeader>
                                         <CardDescription>
-                                            <p className="flex items-center text-lg font-bold text-primary">Weza Prosoft Limited</p>
-                                            <p className="flex items-center justify-between my-5 font-semibold">
+                                            <p className="flex items-center lg:lg:text-lg font-bold text-primary">Weza Prosoft Limited</p>
+                                            <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
                                                 <span>Software Engineer</span>
                                                 <time className="block text-sm text-primary/90">Oct 2020 - PRESENT</time>
                                             </p>
@@ -52,15 +52,15 @@ export default function Experience() {
                                 <Card className={`card-glassmorphism p-2`}>
                                     <CardHeader>
                                         <CardDescription>
-                                            <p className="flex items-center text-lg font-bold text-primary">Paya Ventures Ltd</p>
-                                            <p className="flex items-center justify-between my-5 font-semibold">
+                                            <p className="flex items-center lg:text-lg font-bold text-primary">Paya Ventures Ltd</p>
+                                            <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
                                                 <span>CTO/Software Engineer</span>
                                                 <time className="block text-sm text-primary/90">Feb 2023 - Feb 2024</time>
                                             </p>
                                             <Separator className="my-5 bg-primary" />
                                             <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm italic">
                                                 <li>
-                                                    Develop and maintain the mobile application for Paya. Through this, I was able to ensure that the application is user-friendly, easy to use, and meets the needs of Paya's customers.
+                                                    Develop and maintain the mobile application for Paya. Through this, I was able to ensure that the application is user-friendly, easy to use, and meets the needs of Paya&apos;s customers.
                                                 </li>
                                                 <li>
                                                     Work on API integration: Work on the integration of APIs from different partners, such as ChoiceBank, TransUnion, and Mono. Was able to work with these partners to ensure that the integration is seamless.
@@ -77,8 +77,8 @@ export default function Experience() {
                                 <Card className={`card-glassmorphism p-2`}>
                                     <CardHeader>
                                         <CardDescription>
-                                            <p className="flex items-center text-lg font-bold text-primary">Moringa School</p>
-                                            <p className="flex items-center justify-between my-5 font-semibold">
+                                            <p className="flex items-center lg:text-lg font-bold text-primary">Moringa School</p>
+                                            <p className="flex items-center justify-between my-5 font-semibold text-xs">
                                                 <span>Technical Mentor/Trainer</span>
                                                 <time className="block text-sm text-primary/90">May 2022 - Sep 2023</time>
                                             </p>
@@ -109,8 +109,8 @@ export default function Experience() {
                                 <Card className={`card-glassmorphism p-2`}>
                                     <CardHeader>
                                         <CardDescription>
-                                            <p className="flex items-center text-lg font-bold text-primary">Brance Technologies</p>
-                                            <p className="flex items-center justify-between my-5 font-semibold">
+                                            <p className="flex items-center lg:text-lg font-bold text-primary">Brance Technologies</p>
+                                            <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
                                                 <span>Full Stack Developer</span>
                                                 <time className="block text-sm text-primary/90">Jan 2022 - Mar 2022</time>
                                             </p>
@@ -137,15 +137,15 @@ export default function Experience() {
                                 <Card className={`card-glassmorphism p-2`}>
                                     <CardHeader>
                                         <CardDescription>
-                                            <p className="flex items-center text-lg font-bold text-primary">Premiersoft Technologies</p>
-                                            <p className="flex items-center justify-between my-5 font-semibold">
+                                            <p className="flex items-center lg:text-lg font-bold text-primary">Premiersoft Technologies</p>
+                                            <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
                                                 <span>Full Stack Developer</span>
                                                 <time className="block text-sm text-primary/90">Oct 2020 - Mar 2021</time>
                                             </p>
                                             <Separator className="my-5 bg-primary" />
                                             <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm italic">
                                                 <li>
-                                                    Develop and implement the company's web application using PHP/Laravel
+                                                    Develop and implement the company&apos;s web application using PHP/Laravel
                                                 </li>
                                                 <li>
                                                     Develop new features and infrastructure development in support of rapidly emerging businesses and
@@ -167,8 +167,8 @@ export default function Experience() {
                                 <Card className={`card-glassmorphism p-2`}>
                                     <CardHeader>
                                         <CardDescription>
-                                            <p className="flex items-center text-lg font-bold text-primary">Korean Kenya Solar Limited</p>
-                                            <p className="flex items-center justify-between my-5 font-semibold">
+                                            <p className="flex items-center lg:text-lg font-bold text-primary">Korean Kenya Solar Limited</p>
+                                            <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
                                                 <span>Full Stack Developer</span>
                                                 <time className="block text-sm text-primary/90">Sep 2020 - Oct 2020</time>
                                             </p>
@@ -194,7 +194,96 @@ export default function Experience() {
                     </div>
                 </div>
             </TabsContent>
-            <TabsContent value="education">Make changes to your account here.</TabsContent>
+            <TabsContent value="education">
+                <div className="p-5">
+                    <ol className="relative border-s-4 border-primary-foreground">
+                        <li className="mb-10 ms-6">
+                            <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 dark:ring-primary/40 bg-primary animate-bounce">
+                                <University className="w-4 h-4 text-white" />
+                            </span>
+                            <Card className={`card-glassmorphism p-2`}>
+                                <CardHeader>
+                                    <CardDescription>
+                                        <p className="flex items-center lg:text-lg font-bold text-primary">Jomo Kenyatta University of Agriculture and Technology (JKUAT)</p>
+                                        <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
+                                            <span>Bachelor of Science Information Technology</span>
+                                            <time className="block text-sm text-primary/90">Sep 2021 - May 2024</time>
+                                        </p>
+                                        <Separator className="my-5 bg-primary" />
+                                        <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm">
+                                            <li>
+                                                Proficiency in various programming languages
+                                            </li>
+                                            <li>
+                                                Understanding of data structures and databases
+                                            </li>
+                                            <li>
+                                                Knowledge of computer networks, operating systems, and cybersecurity
+                                            </li>
+                                            <li>
+                                                Skills in software development and project management
+                                            </li>
+                                            <li>
+                                                Concepts of data analytics and machine learning
+                                            </li>
+                                        </ol>
+                                    </CardDescription>
+                                </CardHeader>
+                            </Card>
+                        </li>
+                        <li className="mb-10 ms-6">
+                            <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 dark:ring-primary/40 bg-primary animate-bounce">
+                                <School className="w-4 h-4 text-white" />
+                            </span>
+                            <Card className={`card-glassmorphism p-2`}>
+                                <CardHeader>
+                                    <CardDescription>
+                                        <p className="flex items-center lg:text-lg font-bold text-primary">Moringa School</p>
+                                        <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
+                                            <span>Software Developerment</span>
+                                            <time className="block text-sm text-primary/90">May 2021 - Dec 2021</time>
+                                        </p>
+                                        <Separator className="my-5 bg-primary" />
+                                        <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm">
+                                            <li>
+                                                Advancing my skills in Software Development
+                                            </li>
+                                            <li>
+                                                Learning new technologies and frameworks
+                                            </li>
+                                            <li>
+                                                Working on real-world projects
+                                            </li>
+                                        </ol>
+                                    </CardDescription>
+                                </CardHeader>
+                            </Card>
+                        </li>
+                        <li className="mb-10 ms-6">
+                            <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 dark:ring-primary/40 bg-primary animate-bounce">
+                                <LampDesk className="w-4 h-4 text-white" />
+                            </span>
+                            <Card className={`card-glassmorphism p-2`}>
+                                <CardHeader>
+                                    <CardDescription>
+                                        <p className="flex items-center lg:text-lg font-bold text-primary">Jomo Kenyatta University of Agriculture and Technology (JKUAT)</p>
+                                        <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
+                                            <span>Diploma in Information Technology</span>
+                                            <time className="block text-sm text-primary/90">Jan 2019 - Sep 2021</time>
+                                        </p>
+                                        <Separator className="my-5 bg-primary" />
+                                        <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm">
+                                            <li>
+                                                Use, development, and management of computers, software, networks, and systems that store, retrieve, transmit, and manipulate data.
+                                            </li>
+                                        </ol>
+                                    </CardDescription>
+                                </CardHeader>
+                            </Card>
+                        </li>
+                    </ol>
+                </div>
+            </TabsContent>
         </Tabs>
     )
 }

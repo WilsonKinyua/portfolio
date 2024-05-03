@@ -136,7 +136,7 @@ export default function Home() {
         </div>
       </section>
       {/* professional skills */}
-      <section className="my-20" data-aos="fade-up">
+      <section className="my-20">
         <p className="text-sm uppercase font-semibold tracking-wide text-center">My <span className="text-primary">Talent</span></p>
         <h4 className='text-center capitalize lg:text-4xl text-2xl my-5'>
           professional skills
