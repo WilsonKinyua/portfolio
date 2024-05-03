@@ -57,21 +57,25 @@ export default function Home() {
           alt="Wilson Kinyua"
           width={500}
           height={500}
-          className="w-full lg:h-[45rem] h-96 object-contain lg:order-2 order-1"
+          className="w-full lg:h-[45rem] h-96 object-contain lg:order-2 order-1 grayscale"
+          unoptimized={true}
         />
       </section>
       {/* about me */}
       <section
         className="grid lg:grid-cols-2 grid-cols-1 items-center gap-20 lg:my-20 my-5"
       >
-        <Image
-          src="/img/me-2.svg"
-          alt="About Wilson Kinyua"
-          width={500}
-          height={500}
-          className="w-full h-full rounded-lg border-t-4 border-b-4 border-primary-foreground transition duration-500 hover:border-primary shadow-2xl"
-          data-aos="fade-up"
-        />
+        <div className="rounded-lg h-full border-t-4 border-b-4 border-primary-foreground transition duration-500 hover:border-primary">
+          <Image
+            src="/img/hold.png"
+            alt="About Wilson Kinyua"
+            width={500}
+            height={500}
+            className="w-full h-full object-cover grayscale"
+            data-aos="fade-up"
+            unoptimized={true}
+          />
+        </div>
         <div
           data-aos="fade-up"
         >
