@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react"
 import { ThemeProvider } from "@/components/theme-provider"
-import { Montserrat } from "next/font/google";
 import 'aos/dist/aos.css';
 import "../styles/globals.scss";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/navbar";
 import MouseCustomCursor from "@/components/mouse-custom-cursor";
 import { Toaster } from "@/components/ui/toaster"
-
-const montserrat = Montserrat({ weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"], subsets: ["latin"] });
+import Footer from "@/components/footer";
+import { montserrat } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "Wilson Kinyua | Software Engineer",
@@ -37,6 +36,7 @@ export default function RootLayout({
             <Navbar />
             {children}
           </main>
+          <Footer />
         </ThemeProvider>
         <Analytics />
         <Toaster

@@ -13,24 +13,19 @@ import {
     SheetHeader,
     SheetTrigger,
 } from "@/components/ui/sheet"
-import Image from "next/image"
 import Link from "next/link"
 import { Button } from "./ui/button"
 import { usePathname } from "next/navigation"
 import { Menu } from "lucide-react"
 import { Separator } from "./ui/separator"
 import SocialLinks from "./social-links"
+import { pacifico } from "@/lib/fonts"
 export default function Navbar() {
     const pathname = usePathname()
     return (
         <div className="flex justify-between items-center py-5">
-            <Link href={"/"}>
-                <Image
-                    src="/img/logo.svg"
-                    alt="Wilson Kinyua Logo"
-                    width={130}
-                    height={100}
-                />
+            <Link href={"/"} className={`${pacifico.className} text-2xl`}>
+                <span className="text-primary">W</span>ilson <span className="text-primary">K</span>inyua
             </Link>
             <NavigationMenu>
                 <NavigationMenuList className="hidden lg:flex">

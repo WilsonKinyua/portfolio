@@ -6,7 +6,7 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import { CircleCheck, Code, Component, Globe, Phone, TabletSmartphone, Users, Wallet } from "lucide-react";
+import { Code, Component, Globe, Phone, TabletSmartphone, Users, Wallet } from "lucide-react";
 export default function Services() {
     return (
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 my-10">
