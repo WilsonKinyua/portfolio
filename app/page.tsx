@@ -8,7 +8,7 @@ import React, { useEffect } from "react";
 import Skills from '@/components/skills';
 import Services from '@/components/services';
 import Projects from '@/components/projects';
-import Contact from '@/components/contact';
+import Contact from '@/components/forms/contact';
 import Experience from '@/components/experience';
 
 var ReactRotatingText = require('react-rotating-text');

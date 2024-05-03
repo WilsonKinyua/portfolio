@@ -21,6 +21,7 @@ import { Separator } from "./ui/separator"
 import SocialLinks from "./social-links"
 import { pacifico } from "@/lib/fonts"
 import { useEffect } from "react"
+import Hire from "./forms/hire"
 export default function Navbar() {
     const pathname = usePathname()
 
@@ -104,11 +105,38 @@ export default function Navbar() {
                             </Link>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
-                            <Button
-                                className="font-semibold"
-                            >
-                                Hire Me
-                            </Button>
+                            <Sheet>
+                                <SheetTrigger>
+                                    <Button
+                                        className="font-semibold"
+                                    >
+                                        Hire Me
+                                    </Button>
+                                </SheetTrigger>
+                                <SheetContent
+                                    side="right"
+                                    className="bg-secondary overflow-auto"
+                                >
+                                    <SheetHeader>
+                                        <SheetDescription
+                                            className="my-10"
+                                        >
+                                            <p className="leading-8">
+                                                Have a project you'd like to discuss? I'd love to hear from you.
+                                            </p>
+                                            <Hire />
+                                            <Separator
+                                                className="my-10"
+                                            />
+                                            <p className="uppercase mb-5">Find me</p>
+                                            <SocialLinks />
+                                            <Separator
+                                                className="my-10"
+                                            />
+                                        </SheetDescription>
+                                    </SheetHeader>
+                                </SheetContent>
+                            </Sheet>
                         </NavigationMenuItem>
                     </NavigationMenuList>
                 </NavigationMenu>
@@ -201,11 +229,6 @@ export default function Navbar() {
                                     <Separator
                                         className="my-10"
                                     />
-                                    <Button
-                                        className="bg-primary text-white font-semibold w-full"
-                                    >
-                                        Hire Me
-                                    </Button>
                                 </SheetDescription>
                             </SheetHeader>
                         </SheetContent>
