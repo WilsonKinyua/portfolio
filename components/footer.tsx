@@ -13,7 +13,7 @@ export default function Footer() {
                         <ul className="lg:flex hidden space-x-5">
                             <li>
                                 <Link
-                                    href="/"
+                                    href="#about"
                                     className="transition duration-500 hover:text-primary"
                                 >
                                     About
@@ -21,7 +21,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <Link
-                                    href="/"
+                                    href="#services"
                                     className="transition duration-500 hover:text-primary"
                                 >
                                     Services
@@ -29,7 +29,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <Link
-                                    href="/"
+                                    href="#resume"
                                     className="transition duration-500 hover:text-primary"
                                 >
                                     Resume
@@ -37,7 +37,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <Link
-                                    href="/"
+                                    href="#skills"
                                     className="transition duration-500 hover:text-primary"
                                 >
                                     Skills
@@ -45,7 +45,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <Link
-                                    href="/"
+                                    href="#projects"
                                     className="transition duration-500 hover:text-primary"
                                 >
                                     Projects
@@ -53,7 +53,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <Link
-                                    href="/"
+                                    href="#contact"
                                 >
                                     Contact
                                 </Link>

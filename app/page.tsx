@@ -10,6 +10,7 @@ import Services from '@/components/services';
 import Projects from '@/components/projects';
 import Contact from '@/components/forms/contact';
 import Experience from '@/components/experience';
+import Link from 'next/link';
 
 var ReactRotatingText = require('react-rotating-text');
 
@@ -47,9 +48,10 @@ export default function Home() {
             <Button
               variant={"outline"}
               className="lg:w-auto w-full"
-            >
-              Contact Me
+              asChild>
+              <Link href="#contact">Contact Me</Link>
             </Button>
+
           </div>
           <SocialLinks />
         </div>
@@ -65,6 +67,7 @@ export default function Home() {
       {/* about me */}
       <section
         className="grid lg:grid-cols-2 grid-cols-1 items-center gap-20 lg:my-20 my-5"
+        id='about'
       >
         <div className="rounded-lg h-full border-t-4 border-b-4 border-primary-foreground transition duration-500 hover:border-primary">
           <Image
@@ -118,7 +121,7 @@ export default function Home() {
         </div>
       </section>
       {/* services */}
-      <section className="my-20" data-aos="fade-up">
+      <section className="my-20" id="services" data-aos="fade-up">
         <p className="text-sm uppercase font-semibold tracking-wide text-center">I like to make things easy and fun</p>
         <h4 className='text-center lg:text-4xl text-2xl my-5'>
           My <span className="text-primary">Special Services</span> For your <br className="lg:block hidden" /> Business <span className="text-primary">Development</span>
@@ -126,7 +129,7 @@ export default function Home() {
         <Services />
       </section>
       {/* experiences/education */}
-      <section className="my-20" data-aos="fade-up">
+      <section className="my-20" id='resume' data-aos="fade-up">
         <p className="text-sm uppercase font-semibold tracking-wide text-center">My <span className="text-primary">Resume</span></p>
         <h4 className='text-center capitalize lg:text-4xl text-2xl my-5'>
           Real <span className="text-primary">Problem Solutions</span> Experience
@@ -136,7 +139,7 @@ export default function Home() {
         </div>
       </section>
       {/* professional skills */}
-      <section className="my-20">
+      <section className="my-20" id='skills'>
         <p className="text-sm uppercase font-semibold tracking-wide text-center">My <span className="text-primary">Talent</span></p>
         <h4 className='text-center capitalize lg:text-4xl text-2xl my-5'>
           professional skills
@@ -146,7 +149,7 @@ export default function Home() {
         </div>
       </section>
       {/* Latest Works */}
-      <section className="my-20" data-aos="fade-up">
+      <section className="my-20" data-aos="fade-up" id='projects'>
         <p className="text-sm uppercase font-semibold tracking-wide text-center">Latest Works</p>
         <h4 className='text-center capitalize lg:text-4xl text-2xl my-5'>
           Explore My Popular <span className="text-primary">Projects</span>
@@ -166,7 +169,7 @@ export default function Home() {
         </a>
       </section>
       {/* contact form */}
-      <section>
+      <section id='contact'>
         <div
           className='grid lg:grid-cols-2 grid-cols-1 gap-20 my-20'
         >

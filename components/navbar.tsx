@@ -54,51 +54,42 @@ export default function Navbar() {
                 <NavigationMenu>
                     <NavigationMenuList className="hidden lg:flex">
                         <NavigationMenuItem>
-                            <Link href="/" legacyBehavior passHref>
-                                <NavigationMenuLink
-                                    className={`${navigationMenuTriggerStyle()} ${pathname === "/" ? "dark:text-primary text-primary" : ""}`}
-                                >
-                                    Home
-                                </NavigationMenuLink>
-                            </Link>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <Link href="/" legacyBehavior passHref>
+                            <Link href="#about" legacyBehavior passHref>
                                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                     About
                                 </NavigationMenuLink>
                             </Link>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
-                            <Link href="/" legacyBehavior passHref>
+                            <Link href="#services" legacyBehavior passHref>
                                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                     Services
                                 </NavigationMenuLink>
                             </Link>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
-                            <Link href="/" legacyBehavior passHref>
+                            <Link href="#resume" legacyBehavior passHref>
                                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                     Resume
                                 </NavigationMenuLink>
                             </Link>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
-                            <Link href="/" legacyBehavior passHref>
+                            <Link href="#skills" legacyBehavior passHref>
                                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                     Skills
                                 </NavigationMenuLink>
                             </Link>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
-                            <Link href="/" legacyBehavior passHref>
+                            <Link href="#projects" legacyBehavior passHref>
                                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                     Projects
                                 </NavigationMenuLink>
                             </Link>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
-                            <Link href="/" legacyBehavior passHref>
+                            <Link href="#contact" legacyBehavior passHref>
                                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                     Contact
                                 </NavigationMenuLink>
@@ -175,7 +166,7 @@ export default function Navbar() {
                                         </li>
                                         <li>
                                             <Link
-                                                href="/"
+                                                href="#about"
                                                 className="transition duration-500 hover:text-primary"
                                             >
                                                 About
@@ -183,7 +174,7 @@ export default function Navbar() {
                                         </li>
                                         <li>
                                             <Link
-                                                href="/"
+                                                href="#services"
                                                 className="transition duration-500 hover:text-primary"
                                             >
                                                 Services
@@ -191,7 +182,7 @@ export default function Navbar() {
                                         </li>
                                         <li>
                                             <Link
-                                                href="/"
+                                                href="#resume"
                                                 className="transition duration-500 hover:text-primary"
                                             >
                                                 Resume
@@ -199,7 +190,7 @@ export default function Navbar() {
                                         </li>
                                         <li>
                                             <Link
-                                                href="/"
+                                                href="#skills"
                                                 className="transition duration-500 hover:text-primary"
                                             >
                                                 Skills
@@ -207,7 +198,7 @@ export default function Navbar() {
                                         </li>
                                         <li>
                                             <Link
-                                                href="/"
+                                                href="#projects"
                                                 className="transition duration-500 hover:text-primary"
                                             >
                                                 Projects
@@ -215,7 +206,7 @@ export default function Navbar() {
                                         </li>
                                         <li>
                                             <Link
-                                                href="/"
+                                                href="#contact"
                                             >
                                                 Contact
                                             </Link>
