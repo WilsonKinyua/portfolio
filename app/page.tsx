@@ -57,7 +57,7 @@ export default function Home() {
           alt="Wilson Kinyua"
           width={500}
           height={500}
-          className="w-full lg:h-[45rem] h-96 object-contain lg:order-2 order-1 grayscale"
+          className="w-full lg:h-[45rem] h-96 object-contain lg:order-2 order-1"
           unoptimized={true}
         />
       </section>
