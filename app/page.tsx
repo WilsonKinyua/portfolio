@@ -11,7 +11,7 @@ import Services from '@/components/services';
 import Projects from '@/components/projects';
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { toast, useToast } from "@/components/ui/use-toast"
+import { toast } from "@/components/ui/use-toast"
 
 var ReactRotatingText = require('react-rotating-text');
 
@@ -179,7 +179,7 @@ export default function Home() {
               Get In Touch
             </p>
             <h4 className='lg:text-4xl text-2xl my-5'>
-              Let's Talk For your <span className="text-primary">Next Project(s)</span>
+              Let&apos;s Talk For your <span className="text-primary">Next Project(s)</span>
             </h4>
             <p className="leading-10 my-5">
               Discuss a project or just want to say hi? Connect with me via email or through a phone call.
