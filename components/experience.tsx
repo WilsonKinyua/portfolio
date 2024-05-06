@@ -240,7 +240,7 @@ export default function Experience() {
                                     <CardDescription>
                                         <p className="flex items-center lg:text-lg font-bold text-primary">Moringa School</p>
                                         <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
-                                            <span>Software Developerment</span>
+                                            <span>Software Development</span>
                                             <time className="block text-sm text-primary/90">May 2021 - Dec 2021</time>
                                         </p>
                                         <Separator className="my-5 bg-primary" />

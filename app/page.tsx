@@ -33,7 +33,7 @@ export default function Home() {
             <ReactRotatingText items={['Software Engineer', 'Web developer', 'Frontend Developer', 'Backend Developer', 'Mobile apps Developer', 'UI/UX designer', 'Tech enthusiast']} />
           </p>
           <p className="lg:my-10 my-5 leading-10">
-            From Nairobi, Kenya. I have more that <span className="text-primary">5 years</span> experience
+            From Nairobi, Kenya. I have more than <span className="text-primary">5 years</span> experience
             in development cycle for dynamic web projects,
             app development, and I am also proficient in
             UX/UI design.
