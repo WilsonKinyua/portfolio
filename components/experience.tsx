@@ -27,7 +27,7 @@ export default function Experience() {
                                             <p className="flex items-center lg:lg:text-lg font-bold text-primary">Weza Prosoft Limited</p>
                                             <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
                                                 <span>Software Engineer</span>
-                                                <time className="block text-sm text-primary/90">Oct 2020 - PRESENT</time>
+                                                <time className="block text-sm text-primary/90">Oct 2020 - Mar 2024</time>
                                             </p>
                                             <Separator className="my-5 bg-primary" />
                                             <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm">
