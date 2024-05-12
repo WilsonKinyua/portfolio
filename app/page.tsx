@@ -2,19 +2,21 @@
 import AOS from 'aos';
 import SocialLinks from "@/components/social-links";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, CircleCheck } from "lucide-react";
+import { ChevronRight, CircleCheck, Loader } from "lucide-react";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React, { useEffect, useTransition } from "react";
 import Skills from '@/components/skills';
 import Services from '@/components/services';
 import Projects from '@/components/projects';
 import Contact from '@/components/forms/contact';
 import Experience from '@/components/experience';
 import Link from 'next/link';
+import { sendResumeViewedEmail } from '@/lib/actions';
 
 var ReactRotatingText = require('react-rotating-text');
 
 export default function Home() {
+  const [transition, startTransition] = useTransition();
   useEffect(() => {
     AOS.init({});
   }, []);
@@ -33,20 +35,22 @@ export default function Home() {
             <ReactRotatingText items={['Software Engineer', 'Web developer', 'Frontend Developer', 'Backend Developer', 'Mobile apps Developer', 'UI/UX designer', 'Tech enthusiast']} />
           </p>
           <p className="lg:my-10 my-5 leading-10">
-            From Nairobi, Kenya. I have more than <span className="text-primary">5 years</span> experience
-            in development cycle for dynamic web projects,
-            app development, and I am also proficient in
-            UX/UI design.
+            Dynamic and results-oriented Software Engineer with over 5 years of experience specializing in architecting scalable solutions and leading transformative projects. Proven track record of diagnosing complex challenges, delivering innovative solutions, and fostering collaborative team environments.
           </p>
           <div className="lg:flex lg:gap-5 my-10 lg:space-y-0 space-y-3">
             <Button
               variant={"default"}
               className="lg:w-auto w-full"
               onClick={() => {
-                window.open('https://drive.google.com/file/d/1ULybJIrMYilUrdxzONjkiPeswp4mD0N7/view?usp=sharing', '_blank');
+                startTransition(async () => {
+                  await sendResumeViewedEmail();
+                  window.open('https://drive.google.com/file/d/1CdUq07JGv2vJ3uUrDoejKf5vsRYhstcA/view?usp=sharing', '_blank');
+                })
               }}
+              disabled={transition}
             >
               Download Resume
+              {transition && <Loader className="ml-3 animate-spin" />}
             </Button>
             <Button
               variant={"outline"}

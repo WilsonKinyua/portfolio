@@ -25,4 +25,20 @@ export const sendEmail = async (name: string, email: string, message: string, su
     return { data };
 };
 
-export default sendEmail;
+export const sendResumeViewedEmail = async () => {
+    const { data, error } = await resend.emails.send({
+        from: 'My Portfolio 😃 <website@wilsonkinyua.com>',
+        to: ["wilsonkinyuam@gmail.com"],
+        subject: 'Someone viewed your resume as at ' + new Date().toLocaleString(),
+        html: `
+            <h5>Someone viewed your resume</h5>
+        `
+    });
+
+    if (error) {
+        console.log(error);
+        return { error };
+    }
+
+    return { data };
+}

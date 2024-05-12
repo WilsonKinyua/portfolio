@@ -5,7 +5,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { toast } from "@/components/ui/use-toast"
 import { Button } from "../ui/button";
 import { Loader, Send } from "lucide-react";
-import sendEmail from "@/lib/actions";
+import { sendEmail } from "@/lib/actions";
 export default function Contact() {
     const [transition, startTransition] = useTransition();
     const [formState, setFormState] = useState({
