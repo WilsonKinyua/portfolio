@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/tooltip"
 import { ArrowUpRight } from "lucide-react"
 import Image from "next/image"
-import { useEffect } from "react";
 export default function Projects() {
     const projects = [
         {

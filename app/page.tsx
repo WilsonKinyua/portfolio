@@ -32,7 +32,7 @@ export default function Home() {
             <span className="text-primary">Wilson</span> Kinyua
           </h1>
           <p className="lg:text-4xl text-xl text-primary font-semibold tracking-wide">
-            <ReactRotatingText items={['Software Engineer', 'Web developer', 'Frontend Developer', 'Backend Developer', 'Mobile apps Developer', 'UI/UX designer', 'Tech enthusiast']} />
+            <ReactRotatingText items={['Experienced Software Engineer', 'Full Stack Engineer', 'Frontend Engineer', 'Backend Engineer', 'Mobile apps Engineer', 'Expert in UI/UX Design', 'Lead Engineer']} />
           </p>
           <p className="lg:my-10 my-5 leading-10">
             Dynamic and results-oriented Software Engineer with over 5 years of experience specializing in architecting scalable solutions and leading transformative projects. Proven track record of diagnosing complex challenges, delivering innovative solutions, and fostering collaborative team environments.

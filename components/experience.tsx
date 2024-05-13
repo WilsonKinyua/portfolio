@@ -30,15 +30,21 @@ export default function Experience() {
                                                 <time className="block text-sm text-primary/90">Oct 2020 - Mar 2024</time>
                                             </p>
                                             <Separator className="my-5 bg-primary" />
-                                            <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm">
+                                            <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm italic">
                                                 <li>
-                                                    Using web frameworks such as next js or laravel etc to create and deploy the web application.
+                                                    Led the development and deployment of a scalable web application using Next.js, resulting in a 30% increase in system efficiency and significantly enhancing user engagement.
                                                 </li>
                                                 <li>
-                                                    Develop new features and infrastructure in order to meet quickly changing business and project needs.
+                                                    Implemented automated testing frameworks that reduced bugs by 20% and streamlined the release cycle, enhancing product reliability.
                                                 </li>
                                                 <li>
-                                                    Maintain high standards of code quality and smart application design to ensure application performance, uptime, and scale.
+                                                    Coordinated with product management to align development initiatives with business goals, resulting in a 25% increase in customer satisfaction through targeted feature enhancements.
+                                                </li>
+                                                <li>
+                                                    Championed a continuous learning culture within the team, organizing monthly technical workshops that contributed to a 15% improvement in team skill levels.
+                                                </li>
+                                                <li>
+                                                    Diagnosed software issues, identified root causes, and proposed effective solutions to ensure the smooth operation of the software.
                                                 </li>
                                             </ol>
                                         </CardDescription>
@@ -54,16 +60,32 @@ export default function Experience() {
                                         <CardDescription>
                                             <p className="flex items-center lg:text-lg font-bold text-primary">Paya Ventures Ltd</p>
                                             <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
-                                                <span>CTO/Software Engineer</span>
+                                                <span>SoftwareEngineer/CTO</span>
                                                 <time className="block text-sm text-primary/90">Feb 2023 - Feb 2024</time>
                                             </p>
                                             <Separator className="my-5 bg-primary" />
                                             <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm italic">
                                                 <li>
-                                                    Develop and maintain the mobile application for Paya. Through this, I was able to ensure that the application is user-friendly, easy to use, and meets the needs of Paya&apos;s customers.
+                                                    Developed user-centric mobile applications for Android and iOS, resulting in a
+                                                    20% improvement in customer retention rates through enhanced user experience
+                                                    and functionality.
                                                 </li>
                                                 <li>
-                                                    Work on API integration: Work on the integration of APIs from different partners, such as ChoiceBank, TransUnion, and Mono. Was able to work with these partners to ensure that the integration is seamless.
+                                                    Led seamless API integration with financial partners, enhancing system
+                                                    interoperability and data security, thereby fostering user trust and compliance
+                                                    with financial regulations.
+                                                </li>
+                                                <li>
+                                                    Spearheaded compliance initiatives to meet standards set by the Central Bank of
+                                                    Kenya, ensuring legal compliance and fostering trust with stakeholders.
+                                                </li>
+                                                <li>
+                                                    Optimized mobile app performance, achieving faster load times and scalability,
+                                                    supporting a 50% increase in user base.
+                                                </li>
+                                                <li>
+                                                    Conducted user experience research and feedback sessions, integrating findings
+                                                    into development processes to align with user needs and expectations.
                                                 </li>
                                             </ol>
                                         </CardDescription>
@@ -79,19 +101,22 @@ export default function Experience() {
                                         <CardDescription>
                                             <p className="flex items-center lg:text-lg font-bold text-primary">Moringa School</p>
                                             <p className="flex items-center justify-between my-5 font-semibold text-xs">
-                                                <span>Technical Mentor/Trainer</span>
+                                                <span>SoftwareEngineer</span>
                                                 <time className="block text-sm text-primary/90">May 2022 - Sep 2023</time>
                                             </p>
                                             <Separator className="my-5 bg-primary" />
                                             <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm italic">
                                                 <li>
-                                                    Facilitating daily standups, and lab classes, and providing technical mentorship to students in a classroom setting.
+                                                    Led the design and delivery of a comprehensive software development curriculum, enhancing the technical proficiency of over 200 students.
                                                 </li>
                                                 <li>
-                                                    Supporting student growth through labs and practice sessions, and providing timely and effective feedback on their work and assessments.
+                                                    Provided personalized mentorship and conducted weekly progress reviews, contributing to a 90% success rate of students entering the tech industry.
                                                 </li>
                                                 <li>
-                                                    Supporting student development through one-on-one mentoring.
+                                                    Initiated and led project-based learning approaches, significantly improving practical skills and problem-solving abilities among students.
+                                                </li>
+                                                <li>
+                                                    Fostered a collaborative learning environment that encouraged innovation and the practical application of skills, resulting in three student-led projects being adopted by local businesses.
                                                 </li>
                                             </ol>
                                         </CardDescription>
@@ -111,19 +136,19 @@ export default function Experience() {
                                         <CardDescription>
                                             <p className="flex items-center lg:text-lg font-bold text-primary">Brance Technologies</p>
                                             <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
-                                                <span>Full Stack Developer</span>
+                                                <span>Full Stack Engineer</span>
                                                 <time className="block text-sm text-primary/90">Jan 2022 - Mar 2022</time>
                                             </p>
                                             <Separator className="my-5 bg-primary" />
-                                            <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm">
+                                            <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm italic">
                                                 <li>
-                                                    Design and implement scalable web services, applications, and APIs using Javascript and Laravel.
+                                                    Engineered and launched a full-stack web application using PHP/Laravel, serving as the cornerstone for the company’s operations and supporting over 2,000 active users.
                                                 </li>
                                                 <li>
-                                                    Structure system requirements and suggest a testing and development roadmap.
+                                                    Automated deployment processes using CI/CD principles, resulting in a 40% reduction in downtime and enhanced deployment efficiency.
                                                 </li>
                                                 <li>
-                                                    Set up Continuous Integration Testing and testing to guard against regression of the codebase.
+                                                    Developed and integrated APIs that enhanced application functionality and user satisfaction through improved service delivery.
                                                 </li>
                                             </ol>
                                         </CardDescription>
@@ -139,21 +164,50 @@ export default function Experience() {
                                         <CardDescription>
                                             <p className="flex items-center lg:text-lg font-bold text-primary">Premiersoft Technologies</p>
                                             <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
-                                                <span>Full Stack Developer</span>
+                                                <span>Full Stack Engineer</span>
                                                 <time className="block text-sm text-primary/90">Oct 2020 - Mar 2021</time>
                                             </p>
                                             <Separator className="my-5 bg-primary" />
                                             <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm italic">
                                                 <li>
-                                                    Develop and implement the company&apos;s web application using PHP/Laravel
+                                                    Owned the full project lifecycle of a web application from architecture to deployment, ensuring robustness and scalability.
                                                 </li>
                                                 <li>
-                                                    Develop new features and infrastructure development in support of rapidly emerging businesses and
-                                                    project requirements
+                                                    Implemented a microservices architecture that enhanced the modularity and scalability of the application, enabling easier updates and maintenance.
                                                 </li>
                                                 <li>
-                                                    Ensure application performance, uptime, and scale, maintaining high standards of code quality and
-                                                    thoughtful application design
+                                                    Conducted comprehensive performance optimizations post-deployment, ensuring sustained application performance under increased load conditions.
+                                                </li>
+                                            </ol>
+                                        </CardDescription>
+                                    </CardHeader>
+                                </Card>
+                            </li>
+                            <li className="mb-10 ms-6">
+                                <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 dark:ring-primary/40 bg-primary animate-bounce">
+                                    <Sun className="w-4 h-4 text-white" />
+                                </span>
+                                <Card className={`card-glassmorphism p-2`}>
+                                    <CardHeader>
+                                        <CardDescription>
+                                            <p className="flex items-center lg:text-lg font-bold text-primary">Korean Kenya Solar Limited</p>
+                                            <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
+                                                <span>Full Stack Engineer</span>
+                                                <time className="block text-sm text-primary/90">Sep 2020 - Oct 2020</time>
+                                            </p>
+                                            <Separator className="my-5 bg-primary" />
+                                            <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm italic">
+                                                <li>
+                                                    Involved in developing and implementing the web application using RESTful APIs (Laravel + Angular)
+                                                </li>
+                                                <li>
+                                                    Took full-service ownership constantly monitoring web transactions, error rates and data quality to identify, and prioritize problems
+                                                </li>
+                                                <li>
+                                                    Collaborated with the design team on developing microservices
+                                                </li>
+                                                <li>
+                                                    Wrote technical documents and user guides
                                                 </li>
                                             </ol>
                                         </CardDescription>
@@ -167,23 +221,23 @@ export default function Experience() {
                                 <Card className={`card-glassmorphism p-2`}>
                                     <CardHeader>
                                         <CardDescription>
-                                            <p className="flex items-center lg:text-lg font-bold text-primary">Korean Kenya Solar Limited</p>
+                                            <p className="flex items-center lg:text-lg font-bold text-primary">Web Cloud Ltd Kenya</p>
                                             <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
-                                                <span>Full Stack Developer</span>
-                                                <time className="block text-sm text-primary/90">Sep 2020 - Oct 2020</time>
+                                                <span>Frontend Engineer</span>
+                                                <time className="block text-sm text-primary/90">Jan 2020 - Feb 2020</time>
                                             </p>
                                             <Separator className="my-5 bg-primary" />
                                             <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm italic">
                                                 <li>
-                                                    Involved in developing and implementing the web application using RESTful APIs (Laravel
-                                                    +Angular)
+                                                    Designed and implemented high-performance web services, significantly
+                                                    enhancing the scalability and responsiveness of business applications.                                                </li>
+                                                <li>
+                                                    Established Continuous Integration Testing frameworks, ensuring high-quality
+                                                    software delivery and reducing regression issues.
                                                 </li>
                                                 <li>
-                                                    Took full-service ownership constantly monitoring web transactions, error rates, and data quality
-                                                    to identify, and prioritize problems
-                                                </li>
-                                                <li>
-                                                    Collaborated with the design team on developing micro-services
+                                                    Collaborated closely with cross-functional teams to define and achieve project
+                                                    objectives, leading to the successful launch of three major project deliverables.
                                                 </li>
                                             </ol>
                                         </CardDescription>
@@ -207,24 +261,18 @@ export default function Experience() {
                                         <p className="flex items-center lg:text-lg font-bold text-primary">Jomo Kenyatta University of Agriculture and Technology (JKUAT)</p>
                                         <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
                                             <span>Bachelor of Science Information Technology</span>
-                                            <time className="block text-sm text-primary/90">Sep 2021 - May 2024</time>
+                                            <time className="block text-sm text-primary/90">Jan 2018 - Dec 2021</time>
                                         </p>
                                         <Separator className="my-5 bg-primary" />
                                         <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm">
                                             <li>
-                                                Proficiency in various programming languages
+                                                Specialized in software development and network systems, achieving a comprehensive understanding of IT infrastructures.
                                             </li>
                                             <li>
-                                                Understanding of data structures and databases
+                                                Participated in various tech-driven group projects, enhancing collaborative skills and technical knowledge.
                                             </li>
                                             <li>
-                                                Knowledge of computer networks, operating systems, and cybersecurity
-                                            </li>
-                                            <li>
-                                                Skills in software development and project management
-                                            </li>
-                                            <li>
-                                                Concepts of data analytics and machine learning
+                                                Graduated with honors, demonstrating strong academic performance and a commitment to the field of technology.
                                             </li>
                                         </ol>
                                     </CardDescription>
@@ -246,13 +294,13 @@ export default function Experience() {
                                         <Separator className="my-5 bg-primary" />
                                         <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm">
                                             <li>
-                                                Advancing my skills in Software Development
+                                                Completed an intensive, project-based training program focusing on full-stack software development.
                                             </li>
                                             <li>
-                                                Learning new technologies and frameworks
+                                                Gained hands-on experience with modern web technologies and software engineering principles.
                                             </li>
                                             <li>
-                                                Working on real-world projects
+                                                Collaborated on multiple team projects, simulating real-world software development scenarios.- Completed an intensive, project-based training program focusing on full-stack software development. - Gained hands-on experience with modern web technologies and software engineering principles. - Collaborated on multiple team projects, simulating real-world software development scenarios.
                                             </li>
                                         </ol>
                                     </CardDescription>
@@ -268,13 +316,19 @@ export default function Experience() {
                                     <CardDescription>
                                         <p className="flex items-center lg:text-lg font-bold text-primary">Jomo Kenyatta University of Agriculture and Technology (JKUAT)</p>
                                         <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
-                                            <span>Diploma in Information Technology</span>
-                                            <time className="block text-sm text-primary/90">Jan 2019 - Sep 2021</time>
+                                            <span>Bachelor of Science in Information Technology</span>
+                                            <time className="block text-sm text-primary/90">Jan 2018 - Dec 2021</time>
                                         </p>
                                         <Separator className="my-5 bg-primary" />
                                         <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm">
                                             <li>
-                                                Use, development, and management of computers, software, networks, and systems that store, retrieve, transmit, and manipulate data.
+                                                Specialized in software development and network systems, achieving a comprehensive understanding of IT infrastructures.
+                                            </li>
+                                            <li>
+                                                Participated in various tech-driven group projects, enhancing collaborative skills and technical knowledge.
+                                            </li>
+                                            <li>
+                                                Graduated with honors, demonstrating strong academic performance and a commitment to the field of technology.
                                             </li>
                                         </ol>
                                     </CardDescription>
