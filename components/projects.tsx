@@ -15,6 +15,14 @@ import Image from "next/image"
 export default function Projects() {
     const projects = [
         {
+            title: 'Salaam Somali Bank (SSB)',
+            type: 'Website',
+            description: 'A bank that provides a range of banking services to individuals, small and medium-sized businesses, and corporate clients in Somalia. Is the first privately owned bank in Somalia. We began our operations on October 2009. The bank is regulated by the Central Bank of Somalia. ',
+            image: '/img/projects/7.png',
+            link: 'https://salaam-somali.wdev.co.ke',
+            imagePosition: 'right',
+        },
+        {
             title: 'Mount Kenya Wildlife Conservancy (MKWC)',
             type: 'Website / CMS',
             description: 'A non-profit trust dedicated to preserving the environment and the wildlife within. For 20 years, the MKWC has served as a beacon of conservation, preserving and protecting nature\'s beauty and wildlife for present and future generations.',
@@ -61,6 +69,14 @@ export default function Projects() {
             image: '/img/projects/5.png',
             link: 'https://newmark-imc.com/',
             imagePosition: 'right',
+        },
+        {
+            title: 'ArcSkills',
+            type: 'Webiste',
+            description: 'Transform the lives of young individuals by providing world-class, affordable vocational training that is accessible, practical, and industry-relevant.',
+            image: '/img/projects/8.png',
+            link: 'https://arcskills.co.ke/',
+            imagePosition: 'left',
         },
     ]
     return (

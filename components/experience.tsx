@@ -27,7 +27,7 @@ export default function Experience() {
                                             <p className="flex items-center lg:lg:text-lg font-bold text-primary">Weza Prosoft Limited</p>
                                             <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
                                                 <span>Software Engineer</span>
-                                                <time className="block text-sm text-primary/90">Oct 2020 - Mar 2024</time>
+                                                <time className="block text-sm text-primary/90">Oct 2020 - Now</time>
                                             </p>
                                             <Separator className="my-5 bg-primary" />
                                             <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm italic">
@@ -301,34 +301,6 @@ export default function Experience() {
                                             </li>
                                             <li>
                                                 Collaborated on multiple team projects, simulating real-world software development scenarios.- Completed an intensive, project-based training program focusing on full-stack software development. - Gained hands-on experience with modern web technologies and software engineering principles. - Collaborated on multiple team projects, simulating real-world software development scenarios.
-                                            </li>
-                                        </ol>
-                                    </CardDescription>
-                                </CardHeader>
-                            </Card>
-                        </li>
-                        <li className="mb-10 ms-6">
-                            <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 dark:ring-primary/40 bg-primary animate-bounce">
-                                <LampDesk className="w-4 h-4 text-white" />
-                            </span>
-                            <Card className={`card-glassmorphism p-2`}>
-                                <CardHeader>
-                                    <CardDescription>
-                                        <p className="flex items-center lg:text-lg font-bold text-primary">Jomo Kenyatta University of Agriculture and Technology (JKUAT)</p>
-                                        <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
-                                            <span>Bachelor of Science in Information Technology</span>
-                                            <time className="block text-sm text-primary/90">Jan 2018 - Dec 2021</time>
-                                        </p>
-                                        <Separator className="my-5 bg-primary" />
-                                        <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm">
-                                            <li>
-                                                Specialized in software development and network systems, achieving a comprehensive understanding of IT infrastructures.
-                                            </li>
-                                            <li>
-                                                Participated in various tech-driven group projects, enhancing collaborative skills and technical knowledge.
-                                            </li>
-                                            <li>
-                                                Graduated with honors, demonstrating strong academic performance and a commitment to the field of technology.
                                             </li>
                                         </ol>
                                     </CardDescription>
