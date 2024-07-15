@@ -11,7 +11,7 @@ import Footer from "@/components/footer";
 import { montserrat } from "@/lib/fonts";
 
 export const metadata: Metadata = {
-  title: "Wilson Kinyua | Software Engineer",
+  title: "Wilson Kinyua | Software Engineer | Frontend Engineer | Backend Engineer",
   description: "Driven, innovative Software Engineer with experience in the development of software and solutions. A conscientious person who pays attention to details. Very passionate about software development, always willing and ready to learn new things/concepts. Proven leader with the ability to streamline development processes to drive the achievement of organizational objectives. An ambitious and generally curious professional who strives for greatness and is driven to grow himself and those around oneself through collaboration.",
 };
 
@@ -23,20 +23,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <title>Wilson Kinyua | Software Engineer</title>
-        <meta name="title" content="Wilson Kinyua | Software Engineer" />
+        <title>Wilson Kinyua | Software Engineer | Frontend Engineer</title>
+        <meta name="title" content="Wilson Kinyua | Software Engineer | Backend Engineer" />
         <meta name="description" content="Driven, innovative Software Engineer with experience in the development of software and solutions. A conscientious person who pays attention to details. Very passionate about software development, always willing and ready to learn new things/concepts. Proven leader with the ability to streamline development processes to drive the achievement of organizational objectives. An ambitious and generally curious professional who strives for greatness and is driven to grow himself and those around oneself through collaboration." />
         <meta name="keywords" content="Software Engineer | Lead Developer | Head of Tech | UI/UX Designer | Technical Trainer/Mentor | Frontend Engineer | Backend Engineer" />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.wilsonkinyua.com/" />
-        <meta property="og:title" content="Wilson Kinyua | Software Engineer" />
+        <meta property="og:title" content="Wilson Kinyua | Software Engineer | Backend Engineer" />
         <meta property="og:description" content="Driven, innovative Software Engineer with experience in the development of software and solutions. A conscientious person who pays attention to details. Very passionate about software development, always willing and ready to learn new things/concepts. Proven leader with the ability to streamline development processes to drive the achievement of organizational objectives. An ambitious and generally curious professional who strives for greatness and is driven to grow himself and those around oneself through collaboration." />
         <meta property="og:image" content="/img/me.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.wilsonkinyua.com/" />
-        <meta property="twitter:title" content="Wilson Kinyua | Software Engineer" />
+        <meta property="twitter:title" content="Wilson Kinyua | Software Engineer | Backend Engineer" />
         <meta property="twitter:description" content="Driven, innovative Software Engineer with experience in the development of software and solutions. A conscientious person who pays attention to details. Very passionate about software development, always willing and ready to learn new things/concepts. Proven leader with the ability to streamline development processes to drive the achievement of organizational objectives. An ambitious and generally curious professional who strives for greatness and is driven to grow himself and those around oneself through collaboration." />
         <meta property="twitter:image" content="/img/me.png" />
 
