@@ -115,7 +115,7 @@ export default function Experience() {
                                                     Designed and implemented a new software development curriculum, achieving a 90% job placement rate for graduates.
                                                 </li>
                                                 <li>
-                                                    Initiated project-based learning, significantly improving students' practical skills.
+                                                    Initiated project-based learning, significantly improving students&apos; practical skills.
                                                 </li>
                                             </ol>
                                         </CardDescription>

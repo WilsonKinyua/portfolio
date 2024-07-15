@@ -103,7 +103,7 @@ export default function Home() {
           </h2>
           <p className="leading-10 my-5">
             With over 6 years of dynamic experience in software engineering,
-            I've led the development of scalable solutions such as a financial
+            I&apos;ve led the development of scalable solutions such as a financial
             mobile app that increased customer retention by 20% and a web
             application that boosted system efficiency by 30%. My expertise
             spans frontend and backend development, UI/UX design, and strategic
