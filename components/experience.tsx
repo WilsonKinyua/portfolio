@@ -14,9 +14,114 @@ export default function Experience() {
                 <TabsTrigger value="education">Education</TabsTrigger>
             </TabsList>
             <TabsContent value="experience">
-                <div className="grid lg:grid-cols-2 gap-5">
+                <div className="grid gap-5">
                     <div className="p-5">
                         <ol className="relative border-s-4 border-primary-foreground">
+                            <li className="mb-10 ms-6">
+                                <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 dark:ring-primary/40 bg-primary animate-bounce">
+                                    <Phone className="w-4 h-4 text-white" />
+                                </span>
+                                <Card className={`card-glassmorphism p-2`}>
+                                    <CardHeader>
+                                        <CardDescription>
+                                            <p className="flex items-center lg:text-lg font-bold text-primary">Paya Finance (Ventures Ltd)</p>
+                                            <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
+                                                <span>Chief Technology Officer</span>
+                                                <time className="block text-sm text-primary/90">Jan 2024 - Jun 2024</time>
+                                            </p>
+                                            <Separator className="my-5 bg-primary" />
+                                            <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm italic">
+                                                <li>
+                                                    Led the development and launch of a new financial platform, increasing user engagement by 50% and contributing to 30% revenue growth.
+                                                </li>
+                                                <li>
+                                                    Developed a comprehensive technical roadmap, ensuring scalability, security, and efficiency.
+                                                </li>
+                                                <li>
+                                                    Directed and mentored a diverse team of engineers, fostering continuous learning and improvement.
+                                                </li>
+                                                <li>
+                                                    Spearheaded R&D initiatives to keep the company at the forefront of industry trends.
+                                                </li>
+                                                <li>
+                                                    Oversaw the entire product development lifecycle, ensuring high-quality deliverables.
+                                                </li>
+                                                <li>
+                                                    Optimized operational processes, improving efficiency and reducing costs.
+                                                </li>
+                                                <li>
+                                                    Established robust security protocols and compliance frameworks.
+                                                </li>
+                                                <li>
+                                                    Negotiated and managed relationships with technology vendors and partners.
+                                                </li>
+                                                <li>
+                                                    Supported business development efforts, contributing to a 30% revenue increase through new products and services.
+                                                </li>
+                                            </ol>
+                                            <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
+                                                <span>Senior Frontend Engineer (Android & iOS)</span>
+                                                <time className="block text-sm text-primary/90">Oct 2023 - Dec 2023</time>
+                                            </p>
+                                            <Separator className="my-5 bg-primary" />
+                                            <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm italic">
+                                                <li>
+                                                    Developed user-centric mobile applications, improving customer retention rates by 20%.
+                                                </li>
+                                                <li>
+                                                    Led seamless API integration with financial partners, enhancing system interoperability and data security.
+                                                </li>
+                                                <li>
+                                                    Optimized mobile app performance, supporting a 50% increase in user base.
+                                                </li>
+                                            </ol>
+                                        </CardDescription>
+                                    </CardHeader>
+                                </Card>
+                            </li>
+                            <li className="mb-10 ms-6">
+                                <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 dark:ring-primary/40 bg-primary animate-bounce">
+                                    <School className="w-4 h-4 text-white" />
+                                </span>
+                                <Card className={`card-glassmorphism p-2`}>
+                                    <CardHeader>
+                                        <CardDescription>
+                                            <p className="flex items-center lg:lg:text-lg font-bold text-primary">Moringa School</p>
+                                            <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
+                                                <span>Senior Software Engineer</span>
+                                                <time className="block text-sm text-primary/90">May 2022 - Sept 2023</time>
+                                            </p>
+                                            <Separator className="my-5 bg-primary" />
+                                            <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm italic">
+                                                <li>
+                                                    Led classroom activities, ensuring student success and managing daily routines.
+                                                </li>
+                                                <li>
+                                                    Maintained student tracking systems and developed plans for student success.
+                                                </li>
+                                                <li>
+                                                    Handled disciplinary issues, fostering a positive learning environment.
+                                                </li>
+                                                <li>
+                                                    Achieved mastery in technical mentorship, continuously improving classroom structure and curriculum.
+                                                </li>
+                                                <li>
+                                                    Committed to personal professional growth through continuous learning.
+                                                </li>
+                                                <li>
+                                                    Conducted extensive training sessions in frontend and backend development.
+                                                </li>
+                                                <li>
+                                                    Designed and implemented a new software development curriculum, achieving a 90% job placement rate for graduates.
+                                                </li>
+                                                <li>
+                                                    Initiated project-based learning, significantly improving students' practical skills.
+                                                </li>
+                                            </ol>
+                                        </CardDescription>
+                                    </CardHeader>
+                                </Card>
+                            </li>
                             <li className="mb-10 ms-6">
                                 <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 dark:ring-primary/40 bg-primary animate-bounce">
                                     <LampDesk className="w-4 h-4 text-white" />
@@ -26,107 +131,59 @@ export default function Experience() {
                                         <CardDescription>
                                             <p className="flex items-center lg:lg:text-lg font-bold text-primary">Weza Prosoft Limited</p>
                                             <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
-                                                <span>Software Engineer</span>
-                                                <time className="block text-sm text-primary/90">Oct 2020 - Now</time>
+                                                <span>Full Stack Engineer</span>
+                                                <time className="block text-sm text-primary/90">Jun 2021 - April 2022</time>
                                             </p>
                                             <Separator className="my-5 bg-primary" />
                                             <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm italic">
                                                 <li>
-                                                    Led the development and deployment of a scalable web application using Next.js, resulting in a 30% increase in system efficiency and significantly enhancing user engagement.
+                                                    Developed a web application using Next.js and Django, enhancing user engagement by 25%.
                                                 </li>
                                                 <li>
-                                                    Implemented automated testing frameworks that reduced bugs by 20% and streamlined the release cycle, enhancing product reliability.
+                                                    Integrated automated testing frameworks, reducing bugs by 20%.
                                                 </li>
                                                 <li>
-                                                    Coordinated with product management to align development initiatives with business goals, resulting in a 25% increase in customer satisfaction through targeted feature enhancements.
+                                                    Implemented robust server-side applications using Python, Django, and Flask.
                                                 </li>
                                                 <li>
-                                                    Championed a continuous learning culture within the team, organizing monthly technical workshops that contributed to a 15% improvement in team skill levels.
+                                                    Designed and managed databases using PostgreSQL.
                                                 </li>
                                                 <li>
-                                                    Diagnosed software issues, identified root causes, and proposed effective solutions to ensure the smooth operation of the software.
+                                                    Automated deployment processes using CI/CD pipelines.
+                                                </li>
+                                                <li>
+                                                    Built RESTful APIs to support front-end functionality.
+                                                </li>
+                                                <li>
+                                                    Collaborated with product managers to align development initiatives with business objectives.
                                                 </li>
                                             </ol>
-                                        </CardDescription>
-                                    </CardHeader>
-                                </Card>
-                            </li>
-                            <li className="mb-10 ms-6">
-                                <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 dark:ring-primary/40 bg-primary animate-bounce">
-                                    <Phone className="w-4 h-4 text-white" />
-                                </span>
-                                <Card className={`card-glassmorphism p-2`}>
-                                    <CardHeader>
-                                        <CardDescription>
-                                            <p className="flex items-center lg:text-lg font-bold text-primary">Paya Ventures Ltd</p>
                                             <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
-                                                <span>SoftwareEngineer/CTO</span>
-                                                <time className="block text-sm text-primary/90">Feb 2023 - Feb 2024</time>
+                                                <span>Frontend Engineer</span>
+                                                <time className="block text-sm text-primary/90">Oct 2020 - May 2021</time>
                                             </p>
                                             <Separator className="my-5 bg-primary" />
                                             <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm italic">
                                                 <li>
-                                                    Developed user-centric mobile applications for Android and iOS, resulting in a
-                                                    20% improvement in customer retention rates through enhanced user experience
-                                                    and functionality.
+                                                    Led the development of a scalable web application using Next.js, increasing system efficiency by 30%.
                                                 </li>
                                                 <li>
-                                                    Led seamless API integration with financial partners, enhancing system
-                                                    interoperability and data security, thereby fostering user trust and compliance
-                                                    with financial regulations.
+                                                    Implemented automated testing frameworks, reducing bugs by 20%.
                                                 </li>
                                                 <li>
-                                                    Spearheaded compliance initiatives to meet standards set by the Central Bank of
-                                                    Kenya, ensuring legal compliance and fostering trust with stakeholders.
+                                                    Coordinated with product management, resulting in a 25% increase in customer satisfaction.
                                                 </li>
                                                 <li>
-                                                    Optimized mobile app performance, achieving faster load times and scalability,
-                                                    supporting a 50% increase in user base.
+                                                    Championed a continuous learning culture, organizing monthly technical workshops.
                                                 </li>
                                                 <li>
-                                                    Conducted user experience research and feedback sessions, integrating findings
-                                                    into development processes to align with user needs and expectations.
+                                                    Developed interactive web applications using JavaScript and React.js.
                                                 </li>
                                             </ol>
                                         </CardDescription>
                                     </CardHeader>
                                 </Card>
                             </li>
-                            <li className="ms-6">
-                                <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 dark:ring-primary/40 bg-primary animate-bounce">
-                                    <School className="w-4 h-4 text-white" />
-                                </span>
-                                <Card className={`card-glassmorphism p-2`}>
-                                    <CardHeader>
-                                        <CardDescription>
-                                            <p className="flex items-center lg:text-lg font-bold text-primary">Moringa School</p>
-                                            <p className="flex items-center justify-between my-5 font-semibold text-xs">
-                                                <span>SoftwareEngineer</span>
-                                                <time className="block text-sm text-primary/90">May 2022 - Sep 2023</time>
-                                            </p>
-                                            <Separator className="my-5 bg-primary" />
-                                            <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm italic">
-                                                <li>
-                                                    Led the design and delivery of a comprehensive software development curriculum, enhancing the technical proficiency of over 200 students.
-                                                </li>
-                                                <li>
-                                                    Provided personalized mentorship and conducted weekly progress reviews, contributing to a 90% success rate of students entering the tech industry.
-                                                </li>
-                                                <li>
-                                                    Initiated and led project-based learning approaches, significantly improving practical skills and problem-solving abilities among students.
-                                                </li>
-                                                <li>
-                                                    Fostered a collaborative learning environment that encouraged innovation and the practical application of skills, resulting in three student-led projects being adopted by local businesses.
-                                                </li>
-                                            </ol>
-                                        </CardDescription>
-                                    </CardHeader>
-                                </Card>
-                            </li>
-                        </ol>
-                    </div>
-                    <div className="p-5">
-                        <ol className="relative border-s-4 border-primary-foreground">
                             <li className="mb-10 ms-6">
                                 <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 dark:ring-primary/40 bg-primary animate-bounce">
                                     <Laptop className="w-4 h-4 text-white" />
@@ -136,108 +193,34 @@ export default function Experience() {
                                         <CardDescription>
                                             <p className="flex items-center lg:text-lg font-bold text-primary">Brance Technologies</p>
                                             <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
-                                                <span>Full Stack Engineer</span>
-                                                <time className="block text-sm text-primary/90">Jan 2022 - Mar 2022</time>
+                                                <span>Back End Developer</span>
+                                                <time className="block text-sm text-primary/90">Aug 2018 - June 2020</time>
                                             </p>
                                             <Separator className="my-5 bg-primary" />
                                             <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm italic">
                                                 <li>
-                                                    Engineered and launched a full-stack web application using PHP/Laravel, serving as the cornerstone for the company’s operations and supporting over 2,000 active users.
+                                                    Launched a full-stack web application using PHP/Laravel, supporting over 2,000 users.
                                                 </li>
                                                 <li>
-                                                    Automated deployment processes using CI/CD principles, resulting in a 40% reduction in downtime and enhanced deployment efficiency.
+                                                    Automated deployment processes, reducing downtime by 40%.
                                                 </li>
                                                 <li>
-                                                    Developed and integrated APIs that enhanced application functionality and user satisfaction through improved service delivery.
+                                                    Developed APIs, improving application functionality and user satisfaction.
+                                                </li>
+                                                <li>
+                                                    Maintained server-side applications using Laravel PHP framework.
                                                 </li>
                                             </ol>
-                                        </CardDescription>
-                                    </CardHeader>
-                                </Card>
-                            </li>
-                            <li className="mb-10 ms-6">
-                                <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 dark:ring-primary/40 bg-primary animate-bounce">
-                                    <Warehouse className="w-4 h-4 text-white" />
-                                </span>
-                                <Card className={`card-glassmorphism p-2`}>
-                                    <CardHeader>
-                                        <CardDescription>
-                                            <p className="flex items-center lg:text-lg font-bold text-primary">Premiersoft Technologies</p>
-                                            <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
-                                                <span>Full Stack Engineer</span>
-                                                <time className="block text-sm text-primary/90">Oct 2020 - Mar 2021</time>
-                                            </p>
-                                            <Separator className="my-5 bg-primary" />
-                                            <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm italic">
-                                                <li>
-                                                    Owned the full project lifecycle of a web application from architecture to deployment, ensuring robustness and scalability.
-                                                </li>
-                                                <li>
-                                                    Implemented a microservices architecture that enhanced the modularity and scalability of the application, enabling easier updates and maintenance.
-                                                </li>
-                                                <li>
-                                                    Conducted comprehensive performance optimizations post-deployment, ensuring sustained application performance under increased load conditions.
-                                                </li>
-                                            </ol>
-                                        </CardDescription>
-                                    </CardHeader>
-                                </Card>
-                            </li>
-                            <li className="mb-10 ms-6">
-                                <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 dark:ring-primary/40 bg-primary animate-bounce">
-                                    <Sun className="w-4 h-4 text-white" />
-                                </span>
-                                <Card className={`card-glassmorphism p-2`}>
-                                    <CardHeader>
-                                        <CardDescription>
-                                            <p className="flex items-center lg:text-lg font-bold text-primary">Korean Kenya Solar Limited</p>
-                                            <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
-                                                <span>Full Stack Engineer</span>
-                                                <time className="block text-sm text-primary/90">Sep 2020 - Oct 2020</time>
-                                            </p>
-                                            <Separator className="my-5 bg-primary" />
-                                            <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm italic">
-                                                <li>
-                                                    Involved in developing and implementing the web application using RESTful APIs (Laravel + Angular)
-                                                </li>
-                                                <li>
-                                                    Took full-service ownership constantly monitoring web transactions, error rates and data quality to identify, and prioritize problems
-                                                </li>
-                                                <li>
-                                                    Collaborated with the design team on developing microservices
-                                                </li>
-                                                <li>
-                                                    Wrote technical documents and user guides
-                                                </li>
-                                            </ol>
-                                        </CardDescription>
-                                    </CardHeader>
-                                </Card>
-                            </li>
-                            <li className="ms-6">
-                                <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 dark:ring-primary/40 bg-primary animate-bounce">
-                                    <Sun className="w-4 h-4 text-white" />
-                                </span>
-                                <Card className={`card-glassmorphism p-2`}>
-                                    <CardHeader>
-                                        <CardDescription>
-                                            <p className="flex items-center lg:text-lg font-bold text-primary">Web Cloud Ltd Kenya</p>
                                             <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
                                                 <span>Frontend Engineer</span>
-                                                <time className="block text-sm text-primary/90">Jan 2020 - Feb 2020</time>
+                                                <time className="block text-sm text-primary/90">Feb 2018 - July 2018</time>
                                             </p>
                                             <Separator className="my-5 bg-primary" />
                                             <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm italic">
                                                 <li>
-                                                    Designed and implemented high-performance web services, significantly
-                                                    enhancing the scalability and responsiveness of business applications.                                                </li>
+                                                    Developed responsive web pages using HTML, CSS, and Bootstrap.                                                </li>
                                                 <li>
-                                                    Established Continuous Integration Testing frameworks, ensuring high-quality
-                                                    software delivery and reducing regression issues.
-                                                </li>
-                                                <li>
-                                                    Collaborated closely with cross-functional teams to define and achieve project
-                                                    objectives, leading to the successful launch of three major project deliverables.
+                                                    Utilized JavaScript and React.js to develop dynamic components.
                                                 </li>
                                             </ol>
                                         </CardDescription>
@@ -288,7 +271,7 @@ export default function Experience() {
                                     <CardDescription>
                                         <p className="flex items-center lg:text-lg font-bold text-primary">Moringa School</p>
                                         <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
-                                            <span>Software Development</span>
+                                            <span>Software Development <i>(advancing)</i></span>
                                             <time className="block text-sm text-primary/90">May 2021 - Dec 2021</time>
                                         </p>
                                         <Separator className="my-5 bg-primary" />

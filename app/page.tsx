@@ -35,7 +35,7 @@ export default function Home() {
             <ReactRotatingText items={['Experienced Software Engineer', 'Full Stack Engineer', 'Frontend Engineer', 'Backend Engineer', 'Mobile apps Engineer', 'Expert in UI/UX Design', 'Lead Engineer']} />
           </p>
           <p className="lg:my-10 my-5 leading-10">
-            Dynamic and results-oriented Software Engineer with over 5 years of experience specializing in architecting scalable solutions and leading transformative projects. Proven track record of diagnosing complex challenges, delivering innovative solutions, and fostering collaborative team environments.
+            Dynamic and results-oriented Software Engineer with over 6 years of experience specializing in architecting scalable solutions and leading transformative projects. Proven track record of diagnosing complex challenges, delivering innovative solutions, and fostering collaborative team environments.
           </p>
           <div className="lg:flex lg:gap-5 my-10 lg:space-y-0 space-y-3">
             <Button
@@ -102,7 +102,12 @@ export default function Home() {
             Software <span className="text-primary">Engineer</span>
           </h2>
           <p className="leading-10 my-5">
-            More than 5 years Experience in the development of software and solutions. A conscientious person who pays attention to details. Very passionate about software development, always willing and ready to learn new things/concepts. Proven leader with the ability to streamline development processes to drive the achievement of organisational objectives.
+            With over 6 years of dynamic experience in software engineering,
+            I've led the development of scalable solutions such as a financial
+            mobile app that increased customer retention by 20% and a web
+            application that boosted system efficiency by 30%. My expertise
+            spans frontend and backend development, UI/UX design, and strategic
+            leadership, consistently driving innovation and excellence.
           </p>
           <ul className="space-y-4 mb-10">
             <li className="flex">
@@ -192,7 +197,7 @@ export default function Home() {
             </p>
             <ul className="space-y-4 mb-10">
               <li className="flex">
-                <CircleCheck className="text-primary mr-3" /> 5+ Years of Experience
+                <CircleCheck className="text-primary mr-3" /> 6+ Years of Experience
               </li>
               <li className="flex">
                 <CircleCheck className="text-primary mr-3" /> Professional Web Designer

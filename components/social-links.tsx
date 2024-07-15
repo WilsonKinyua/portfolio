@@ -53,26 +53,6 @@ export default function SocialLinks() {
                 <TooltipProvider>
                     <Tooltip>
                         <TooltipTrigger>
-                            <a href="https://twitter.com/_wilsonkinyua"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <Twitter
-                                    size={24}
-                                    className="bg-icon rounded-md h-10 w-10 p-2 text-primary hover:bg-primary hover:text-white transition duration-500 hover:-translate-y-2"
-                                />
-                            </a>
-                        </TooltipTrigger>
-                        <TooltipContent>
-                            Twitter
-                        </TooltipContent>
-                    </Tooltip>
-                </TooltipProvider>
-            </li>
-            <li>
-                <TooltipProvider>
-                    <Tooltip>
-                        <TooltipTrigger>
                             <a href="https://www.figma.com/@wilsonkinyua"
                                 target="_blank"
                                 rel="noopener noreferrer"
