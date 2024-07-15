@@ -15,6 +15,14 @@ import Image from "next/image"
 export default function Projects() {
     const projects = [
         {
+            title: 'Dalbit Petroleum Ltd',
+            type: 'Website / CMS',
+            description: 'Dalbit is a member of the Janus Continental Group (JCG) with presence and operations in nine countries in the Eastern, Central, and Southern African regions.',
+            image: '/img/projects/9.png',
+            link: 'https://www.dalbitpetroleum.com/en',
+            imagePosition: 'left',
+        },
+        {
             title: 'Salaam Somali Bank (SSB)',
             type: 'Website',
             description: 'A bank that provides a range of banking services to individuals, small and medium-sized businesses, and corporate clients in Somalia. Is the first privately owned bank in Somalia. We began our operations on October 2009. The bank is regulated by the Central Bank of Somalia. ',
