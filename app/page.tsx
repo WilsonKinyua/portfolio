@@ -44,7 +44,7 @@ export default function Home() {
               onClick={() => {
                 startTransition(async () => {
                   await sendResumeViewedEmail();
-                  window.open('https://drive.google.com/file/d/1TIV2P9iVrW-0VXrICRNRzc83kRIFTwx1/view?usp=sharing', '_blank');
+                  window.open('https://drive.google.com/file/d/1Yi7wc7_kkeQPZj5p5Qz1UtGHdc62db06/view?usp=sharing', '_blank');
                 })
               }}
               disabled={transition}
