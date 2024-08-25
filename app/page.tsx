@@ -161,7 +161,7 @@ export default function Home() {
         </div>
       </section>
       {/* Latest Works */}
-      <section className="my-20" data-aos="fade-up" id='projects'>
+      <section className="my-20" id='projects'>
         <p className="text-sm uppercase font-semibold tracking-wide text-center">Latest Works</p>
         <h4 className='text-center capitalize lg:text-4xl text-2xl my-5'>
           Explore My Popular <span className="text-primary">Projects</span>
