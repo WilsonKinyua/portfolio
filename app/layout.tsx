@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Analytics } from "@vercel/analytics/react"
 import { ThemeProvider } from "@/components/theme-provider"
 import 'aos/dist/aos.css';
@@ -59,7 +60,9 @@ export default function RootLayout({
           <Footer />
           <Analytics />
         </ThemeProvider>
-        <Toaster
+        <Toaster />
+        <GoogleAnalytics
+          gaId="G-95T62PEV34"
         />
       </body>
     </html>
