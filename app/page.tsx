@@ -44,11 +44,7 @@ export default function Home() {
               onClick={() => {
                 startTransition(async () => {
                   await sendResumeViewedEmail();
-                  //  scroll down to about section
-                  const aboutSection = document.querySelector('#about');
-                  if (aboutSection) {
-                    aboutSection.scrollIntoView({ behavior: 'smooth' });
-                  }
+                  window.open('https://drive.google.com/file/d/1FbiEoxrZVnvJK2dznirfoDPEVw6vWtut/view?usp=sharing', '_blank');
                 })
               }}
               disabled={transition}
