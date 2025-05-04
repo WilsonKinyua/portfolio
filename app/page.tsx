@@ -4,7 +4,7 @@ import SocialLinks from "@/components/social-links";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, CircleCheck, Loader } from "lucide-react";
 import Image from "next/image";
-import React, { useEffect, useTransition } from "react";
+import React, { useEffect, useTransition, useState } from "react";
 import Skills from '@/components/skills';
 import Services from '@/components/services';
 import Projects from '@/components/projects';
@@ -18,6 +18,8 @@ var ReactRotatingText = require('react-rotating-text');
 
 export default function Home() {
   const [transition, startTransition] = useTransition();
+  const [userIp, setUserIp] = useState('');
+
   useEffect(() => {
     AOS.init({
       once: false,
@@ -25,7 +27,51 @@ export default function Home() {
       duration: 700,
       easing: 'ease-out-cubic',
     });
+
+    // Fetch the user's IP address on the client side
+    const fetchUserIp = async () => {
+      try {
+        const response = await fetch('https://api.ipify.org?format=json');
+        const data = await response.json();
+        setUserIp(data.ip);
+      } catch (error) {
+      }
+    };
+
+    fetchUserIp();
   }, []);
+
+  const handleResumeDownload = () => {
+    startTransition(async () => {
+      // Capture user agent information and IP address
+      const userAgent = window.navigator.userAgent;
+
+      // Get additional client information
+      const screenWidth = window.screen.width;
+      const screenHeight = window.screen.height;
+      const language = window.navigator.language;
+      const platform = window.navigator.platform;
+      const referrer = document.referrer || 'Direct visit';
+
+      // Create a visitor data object
+      const visitorData = {
+        userAgent,
+        ip: userIp,
+        screenSize: `${screenWidth}x${screenHeight}`,
+        language,
+        platform,
+        referrer,
+        visitedAt: new Date().toISOString(),
+      };
+
+      // Send the information to our server action
+      await sendResumeViewedEmail(JSON.stringify(visitorData));
+
+      // Open the resume in a new tab
+      window.open('https://drive.google.com/file/d/1NC_D4W6pFaXRXrwu-zx7tRAOxiZoCKhM/view?usp=sharing', '_blank');
+    });
+  };
+
   return (
     <React.Fragment>
       {/* Hero Section - Main introduction */}
@@ -47,12 +93,7 @@ export default function Home() {
             <Button
               variant={"default"}
               className="lg:w-auto w-full"
-              onClick={() => {
-                startTransition(async () => {
-                  await sendResumeViewedEmail();
-                  window.open('https://drive.google.com/file/d/1NC_D4W6pFaXRXrwu-zx7tRAOxiZoCKhM/view?usp=sharing', '_blank');
-                })
-              }}
+              onClick={handleResumeDownload}
               disabled={transition}
               aria-label="Download Resume"
             >
@@ -66,7 +107,6 @@ export default function Home() {
               asChild>
               <Link href="#contact">Contact Me</Link>
             </Button>
-
           </div>
           <SocialLinks />
         </div>
