@@ -102,6 +102,7 @@ export default function Projects() {
                                     width={50}
                                     height={50}
                                     className={`w-full object-contain ${project.title === 'Paya Finance' ? 'h-96' : 'h-full'}`}
+                                    unoptimized
                                 />
                             </CardDescription>
                         </CardHeader>

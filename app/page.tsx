@@ -12,18 +12,24 @@ import Contact from '@/components/forms/contact';
 import Experience from '@/components/experience';
 import Link from 'next/link';
 import { sendResumeViewedEmail } from '@/lib/actions';
+import FAQ from '@/components/faq';
 
 var ReactRotatingText = require('react-rotating-text');
 
 export default function Home() {
   const [transition, startTransition] = useTransition();
   useEffect(() => {
-    AOS.init({});
+    AOS.init({
+      once: false,
+      disable: 'phone',
+      duration: 700,
+      easing: 'ease-out-cubic',
+    });
   }, []);
   return (
     <React.Fragment>
-      {/* intro */}
-      <section className="grid lg:grid-cols-2 grid-cols-1 items-center lg:text-left text-center">
+      {/* Hero Section - Main introduction */}
+      <section className="grid lg:grid-cols-2 grid-cols-1 items-center lg:text-left text-center min-h-screen" id="home" aria-label="Hero section">
         <div className="lg:order-1 order-2 lg:my-0 my-10">
           <p className="text-sm uppercase font-semibold tracking-wide">
             HELLO, I&apos;M
@@ -48,13 +54,15 @@ export default function Home() {
                 })
               }}
               disabled={transition}
+              aria-label="Download Resume"
             >
               Download Resume
-              {transition && <Loader className="ml-3 animate-spin" />}
+              {transition && <Loader className="ml-3 animate-spin" aria-hidden="true" />}
             </Button>
             <Button
               variant={"outline"}
               className="lg:w-auto w-full"
+              aria-label="Contact Me"
               asChild>
               <Link href="#contact">Contact Me</Link>
             </Button>
@@ -64,27 +72,32 @@ export default function Home() {
         </div>
         <Image
           src="/img/me.png"
-          alt="Wilson Kinyua"
+          alt="Wilson Kinyua - Professional Software Engineer"
           width={500}
           height={500}
           className="w-full lg:h-[45rem] h-96 object-contain lg:order-2 order-1"
           unoptimized={true}
+          priority={true}
+          loading="eager"
         />
       </section>
-      {/* about me */}
+
+      {/* About Section */}
       <section
         className="grid lg:grid-cols-2 grid-cols-1 items-center gap-20 lg:my-20 my-5"
         id='about'
+        aria-label="About me section"
       >
         <div className="rounded-lg h-full border-t-4 border-b-4 border-primary-foreground transition duration-500 hover:border-primary">
           <Image
             src="/img/hold.png"
-            alt="About Wilson Kinyua"
+            alt="Wilson Kinyua - About Me"
             width={500}
             height={500}
             className="w-full h-full object-cover grayscale"
             data-aos="fade-up"
             unoptimized={true}
+            loading="lazy"
           />
         </div>
         <div
@@ -111,105 +124,122 @@ export default function Home() {
           </p>
           <ul className="space-y-4 mb-10">
             <li className="flex">
-              <CircleCheck className="text-primary mr-3" /> Develop highly interactive Front end / User Interfaces for the web
+              <CircleCheck className="text-primary mr-3" aria-hidden="true" /> <span>Develop highly interactive Front end / User Interfaces for the web</span>
             </li>
             <li className="flex">
-              <CircleCheck className="text-primary mr-3" /> Progressive Web Applications ( PWA ) in normal and SPA Stacks
+              <CircleCheck className="text-primary mr-3" aria-hidden="true" /> <span>Progressive Web Applications ( PWA ) in normal and SPA Stacks</span>
             </li>
             <li className="flex">
-              <CircleCheck className="text-primary mr-3" /> Integration of third party services such as AWS / Digital Ocean
+              <CircleCheck className="text-primary mr-3" aria-hidden="true" /> <span>Integration of third party services such as AWS / Digital Ocean</span>
             </li>
             <li className="flex">
-              <CircleCheck className="text-primary mr-3" /> Integration of payment services such as M-Pesa and paypal etc
+              <CircleCheck className="text-primary mr-3" aria-hidden="true" /> <span>Integration of payment services such as M-Pesa and paypal etc</span>
             </li>
             <li className="flex">
-              <CircleCheck className="text-primary mr-3" /> Develop highly interactive Mobile Applications
+              <CircleCheck className="text-primary mr-3" aria-hidden="true" /> <span>Develop highly interactive Mobile Applications</span>
             </li>
             <li className="flex">
-              <CircleCheck className="text-primary mr-3" /> Develop highly interactive Backend / API services
+              <CircleCheck className="text-primary mr-3" aria-hidden="true" /> <span>Develop highly interactive Backend / API services</span>
             </li>
           </ul>
           <SocialLinks />
         </div>
       </section>
-      {/* services */}
-      <section className="my-20" id="services" data-aos="fade-up">
+
+      {/* Services Section */}
+      <section className="my-20" id="services" data-aos="fade-up" aria-label="Services section">
         <p className="text-sm uppercase font-semibold tracking-wide text-center">I like to make things easy and fun</p>
-        <h4 className='text-center lg:text-4xl text-2xl my-5'>
+        <h2 className='text-center lg:text-4xl text-2xl my-5'>
           My <span className="text-primary">Special Services</span> For your <br className="lg:block hidden" /> Business <span className="text-primary">Development</span>
-        </h4>
+        </h2>
         <Services />
       </section>
-      {/* experiences/education */}
-      <section className="my-20" id='resume' data-aos="fade-up">
+
+      {/* Experience Section */}
+      <section className="my-20" id='resume' data-aos="fade-up" aria-label="Resume section">
         <p className="text-sm uppercase font-semibold tracking-wide text-center">My <span className="text-primary">Resume</span></p>
-        <h4 className='text-center capitalize lg:text-4xl text-2xl my-5'>
+        <h2 className='text-center capitalize lg:text-4xl text-2xl my-5'>
           Real <span className="text-primary">Problem Solutions</span> Experience
-        </h4>
+        </h2>
         <div className="my-10">
           <Experience />
         </div>
       </section>
-      {/* professional skills */}
-      <section className="my-20" id='skills'>
+
+      {/* Skills Section */}
+      <section className="my-20" id='skills' aria-label="Skills section">
         <p className="text-sm uppercase font-semibold tracking-wide text-center">My <span className="text-primary">Talent</span></p>
-        <h4 className='text-center capitalize lg:text-4xl text-2xl my-5'>
+        <h2 className='text-center capitalize lg:text-4xl text-2xl my-5'>
           professional skills
-        </h4>
+        </h2>
         <div className="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-5 my-10">
           <Skills />
         </div>
       </section>
-      {/* Latest Works */}
-      <section className="my-20" id='projects'>
+
+      {/* Projects Section */}
+      <section className="my-20" id='projects' aria-label="Projects section">
         <p className="text-sm uppercase font-semibold tracking-wide text-center">Latest Works</p>
-        <h4 className='text-center capitalize lg:text-4xl text-2xl my-5'>
+        <h2 className='text-center capitalize lg:text-4xl text-2xl my-5'>
           Explore My Popular <span className="text-primary">Projects</span>
-        </h4>
+        </h2>
         <Projects />
         <a
           href="https://github.com/Wilsonkinyua"
           className="flex justify-center my-10"
           target='_blank'
+          rel="noopener noreferrer"
+          aria-label="View all projects on GitHub"
         >
           <Button
             variant={"default"}
             className="lg:w-auto w-full"
           >
-            View All Projects <ChevronRight className="ml-3" />
+            View All Projects <ChevronRight className="ml-3" aria-hidden="true" />
           </Button>
         </a>
       </section>
-      {/* contact form */}
-      <section id='contact'>
-        <div
-          className='grid lg:grid-cols-2 grid-cols-1 gap-20 my-20'
-        >
+
+      {/* FAQ Section */}
+      <section className="my-20" id='faq' aria-label="Frequently Asked Questions">
+        <p className="text-sm uppercase font-semibold tracking-wide text-center">Questions & Answers</p>
+        <h2 className='text-center capitalize lg:text-4xl text-2xl my-5'>
+          Frequently Asked <span className="text-primary">Questions</span>
+        </h2>
+        <p className="text-center mb-10 max-w-2xl mx-auto">
+          Below are answers to some common questions about my services and expertise. If you have other questions, feel free to get in touch.
+        </p>
+        <FAQ />
+      </section>
+
+      {/* Contact Section */}
+      <section id='contact' aria-label="Contact section">
+        <div className='grid lg:grid-cols-2 grid-cols-1 gap-20 my-20'>
           <div>
             <p className="text-sm uppercase font-semibold tracking-wide">
               Get In Touch
             </p>
-            <h4 className='lg:text-4xl text-2xl my-5'>
+            <h2 className='lg:text-4xl text-2xl my-5'>
               Let&apos;s Talk For your <span className="text-primary">Next Project(s)</span>
-            </h4>
+            </h2>
             <p className="leading-10 my-5">
               Discuss a project or just want to say hi? Connect with me via email or through a phone call.
             </p>
             <ul className="space-y-4 mb-10">
               <li className="flex">
-                <CircleCheck className="text-primary mr-3" /> 6+ Years of Experience
+                <CircleCheck className="text-primary mr-3" aria-hidden="true" /> <span>6+ Years of Experience</span>
               </li>
               <li className="flex">
-                <CircleCheck className="text-primary mr-3" /> Professional Web Designer
+                <CircleCheck className="text-primary mr-3" aria-hidden="true" /> <span>Professional Web Designer</span>
               </li>
               <li className="flex">
-                <CircleCheck className="text-primary mr-3" /> Mobile Apps Development
+                <CircleCheck className="text-primary mr-3" aria-hidden="true" /> <span>Mobile Apps Development</span>
               </li>
               <li className="flex">
-                <CircleCheck className="text-primary mr-3" /> Technical Mentorship
+                <CircleCheck className="text-primary mr-3" aria-hidden="true" /> <span>Technical Mentorship</span>
               </li>
               <li className="flex">
-                <CircleCheck className="text-primary mr-3" /> Fullstack Developer
+                <CircleCheck className="text-primary mr-3" aria-hidden="true" /> <span>Fullstack Developer</span>
               </li>
             </ul>
             <SocialLinks />
