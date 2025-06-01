@@ -13,6 +13,7 @@ import Experience from '@/components/experience';
 import Link from 'next/link';
 import { sendResumeViewedEmail } from '@/lib/actions';
 import FAQ from '@/components/faq';
+import Breadcrumb from "@/components/breadcrumb";
 
 var ReactRotatingText = require('react-rotating-text');
 
@@ -72,19 +73,28 @@ export default function Home() {
     });
   };
 
+  const breadcrumbItems = [
+    { name: "Home", url: "https://www.wilsonkinyua.com" },
+    { name: "Portfolio", url: "https://www.wilsonkinyua.com#projects" }
+  ];
+
   return (
     <React.Fragment>
+      <div className="hidden">
+        <Breadcrumb items={breadcrumbItems} />
+      </div>
+
       {/* Hero Section - Main introduction */}
-      <section className="grid lg:grid-cols-2 grid-cols-1 items-center lg:text-left text-center min-h-screen" id="home" aria-label="Hero section">
-        <div className="lg:order-1 order-2 lg:my-0 my-10">
+      <section className="grid lg:grid-cols-2 grid-cols-1 items-center lg:text-left text-center min-h-screen" id="home" aria-label="Hero section - Wilson Kinyua Introduction">
+        <header className="lg:order-1 order-2 lg:my-0 my-10">
           <p className="text-sm uppercase font-semibold tracking-wide">
             HELLO, I&apos;M
           </p>
           <h1 className="lg:text-5xl text-2xl font-black tracking-[0.1rem] lg:my-5 my-2">
             <span className="text-primary">Wilson</span> Kinyua
           </h1>
-          <p className="lg:text-4xl text-xl text-primary font-semibold tracking-wide">
-            <ReactRotatingText items={['Experienced Software Engineer', 'Full Stack Engineer', 'Frontend Engineer', 'Backend Engineer', 'Mobile apps Engineer', 'Expert in UI/UX Design', 'Lead Engineer']} />
+          <p className="lg:text-4xl text-xl text-primary font-semibold tracking-wide" role="doc-subtitle">
+            <ReactRotatingText items={['Senior Software Engineer', 'Full Stack Engineer', 'Frontend Engineer', 'Backend Engineer', 'Mobile Apps Engineer', 'Expert in UI/UX Design', 'Technical Lead']} />
           </p>
           <p className="lg:my-10 my-5 leading-10">
             Dynamic and results-oriented Software Engineer with over 6 years of experience specializing in architecting scalable solutions and leading transformative projects. Proven track record of diagnosing complex challenges, delivering innovative solutions, and fostering collaborative team environments.
@@ -95,7 +105,7 @@ export default function Home() {
               className="lg:w-auto w-full"
               onClick={handleResumeDownload}
               disabled={transition}
-              aria-label="Download Resume"
+              aria-label="Download Wilson Kinyua's Resume PDF"
             >
               Download Resume
               {transition && <Loader className="ml-3 animate-spin" aria-hidden="true" />}
@@ -103,16 +113,16 @@ export default function Home() {
             <Button
               variant={"outline"}
               className="lg:w-auto w-full"
-              aria-label="Contact Me"
+              aria-label="Contact Wilson Kinyua"
               asChild>
               <Link href="#contact">Contact Me</Link>
             </Button>
           </div>
           <SocialLinks />
-        </div>
+        </header>
         <Image
           src="/img/me.png"
-          alt="Wilson Kinyua - Professional Software Engineer"
+          alt="Wilson Kinyua - Professional Software Engineer portrait"
           width={500}
           height={500}
           className="w-full lg:h-[45rem] h-96 object-contain lg:order-2 order-1"
@@ -126,12 +136,12 @@ export default function Home() {
       <section
         className="grid lg:grid-cols-2 grid-cols-1 items-center gap-20 lg:my-20 my-5"
         id='about'
-        aria-label="About me section"
+        aria-labelledby="about-heading"
       >
         <div className="rounded-lg h-full border-t-4 border-b-4 border-primary-foreground transition duration-500 hover:border-primary">
           <Image
             src="/img/hold.png"
-            alt="Wilson Kinyua - About Me"
+            alt="Wilson Kinyua - Professional software engineer working"
             width={500}
             height={500}
             className="w-full h-full object-cover grayscale"
@@ -140,17 +150,13 @@ export default function Home() {
             loading="lazy"
           />
         </div>
-        <div
-          data-aos="fade-up"
-        >
+        <article data-aos="fade-up">
           <p className="text-sm uppercase font-semibold tracking-wide">
             About Me
           </p>
-          <h2 className="lg:text-4xl text-2xl my-5">
+          <h2 id="about-heading" className="lg:text-4xl text-2xl my-5">
             <span className="text-primary">Driven,</span> Innovative
-            <br
-              className="lg:block hidden"
-            />
+            <br className="lg:block hidden" />
             {" "}
             Software <span className="text-primary">Engineer</span>
           </h2>
@@ -183,7 +189,7 @@ export default function Home() {
             </li>
           </ul>
           <SocialLinks />
-        </div>
+        </article>
       </section>
 
       {/* Services Section */}

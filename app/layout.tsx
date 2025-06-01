@@ -11,18 +11,54 @@ import { Toaster } from "@/components/ui/toaster"
 import Footer from "@/components/footer";
 import { montserrat } from "@/lib/fonts";
 import Script from "next/script";
+import SkipToContent from "@/components/skip-to-content";
 
 export const metadata: Metadata = {
-  title: "Wilson Kinyua | Software Engineer | Frontend Engineer | Backend Engineer",
-  description: "Driven, innovative Software Engineer with 6+ years experience in frontend, backend, and mobile development. Expert in React, Next.js, TypeScript, Python, and UI/UX design. View my portfolio for software engineering solutions.",
+  title: {
+    default: "Wilson Kinyua | Senior Software Engineer & Full Stack Developer in Nairobi, Kenya",
+    template: "%s | Wilson Kinyua"
+  },
+  description: "Wilson Kinyua - Senior Software Engineer with 6+ years experience in React, Next.js, TypeScript, Python, and Laravel. Available for freelance projects and full-time opportunities in Nairobi, Kenya. View portfolio and download resume.",
   metadataBase: new URL("https://www.wilsonkinyua.com"),
   alternates: {
     canonical: "/",
   },
-  keywords: "Software Engineer, Frontend Engineer, Backend Engineer, Full Stack Developer, React Developer, Next.js Developer, UI/UX Designer, Wilson Kinyua, TypeScript, JavaScript, Python, Laravel, PHP, Vue.js, Tailwind CSS, Nairobi Kenya, Chief Technology Officer, Senior Frontend Developer, Senior Software Engineer",
+  keywords: [
+    // Primary keywords
+    "Wilson Kinyua",
+    "Software Engineer Nairobi",
+    "Full Stack Developer Kenya",
+    "Frontend Engineer React",
+    "Backend Developer Python",
+    // Skill-based keywords
+    "React Developer",
+    "Next.js Expert",
+    "TypeScript Developer",
+    "Python Engineer",
+    "Laravel Developer",
+    "Vue.js Developer",
+    "Mobile App Developer",
+    "UI/UX Designer",
+    // Location + role combinations
+    "Software Engineer Nairobi Kenya",
+    "Frontend Developer Nairobi",
+    "React Developer Kenya",
+    "Freelance Developer Nairobi",
+    // Portfolio related
+    "Software Engineer Portfolio",
+    "Developer Portfolio Kenya",
+    "Tech Portfolio Nairobi"
+  ].join(", "),
+  authors: [{ name: "Wilson Kinyua", url: "https://www.wilsonkinyua.com" }],
+  creator: "Wilson Kinyua",
+  publisher: "Wilson Kinyua",
+  category: "Technology",
   robots: {
     index: true,
     follow: true,
+    "max-image-preview": "large",
+    "max-video-preview": -1,
+    "max-snippet": -1,
     googleBot: {
       index: true,
       follow: true,
@@ -54,9 +90,6 @@ export const metadata: Metadata = {
     images: ["https://www.wilsonkinyua.com/img/me.png"],
     creator: "@wilsonkinyuam",
   },
-  authors: [{ name: "Wilson Kinyua" }],
-  creator: "Wilson Kinyua",
-  publisher: "Wilson Kinyua",
 };
 
 export default function RootLayout({
@@ -82,10 +115,6 @@ export default function RootLayout({
         {/* Preloading key CSS files for faster rendering */}
         <link rel="preload" href="/styles/globals.scss" as="style" />
 
-        {/* SEO verification tags - add your verification codes */}
-        <meta name="google-site-verification" content="your-google-verification-code" />
-        <meta name="msvalidate.01" content="your-bing-verification-code" />
-
         {/* Location-specific metadata */}
         <meta name="geo.region" content="KE" />
         <meta name="geo.placename" content="Nairobi" />
@@ -95,6 +124,7 @@ export default function RootLayout({
       <body
         className={cn(montserrat.className)}
       >
+        <SkipToContent />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -102,7 +132,7 @@ export default function RootLayout({
         >
           <MouseCustomCursor />
           <Navbar />
-          <main className="container mx-auto">
+          <main id="main-content" className="container mx-auto" role="main" tabIndex={-1}>
             {children}
           </main>
           <Footer />
@@ -262,7 +292,7 @@ export default function RootLayout({
               {
                 '@type': 'SoftwareSourceCode',
                 position: 2,
-                name: '“Say NO” Campaign',
+                name: '"Say NO" Campaign',
                 description: 'This initiative emerges from a profound understanding of the urgent need to combat the growing trend of fake job scams that exploit the good name of reputable businesses to perpetrate human trafficking and other forms of illegal cross-border activities.',
                 programmingLanguage: ['Next.js', 'TypeScript', 'Tailwind CSS'],
                 codeRepository: 'https://github.com/Wilsonkinyua',
