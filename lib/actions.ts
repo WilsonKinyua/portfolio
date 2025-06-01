@@ -24,7 +24,10 @@ export const sendEmail = async (
   });
 
   if (error) {
-    console.log(error);
+    // Only log errors in development environment
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Email sending error:', error);
+    }
     return { error };
   }
 
@@ -69,11 +72,10 @@ export async function sendResumeViewedEmail(
       visitedAt: visitorData.visitedAt,
     };
 
-    // Log this information
-    console.log(
-      'Resume downloaded by user with the following details:',
-      locationData
-    );
+    // Log this information only in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Resume downloaded by user with the following details:', locationData);
+    }
 
     // Send an email notification about the resume view
     const { data, error } = await resend.emails.send({
@@ -106,7 +108,9 @@ export async function sendResumeViewedEmail(
     });
 
     if (error) {
-      console.error('Error sending resume view notification email:', error);
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Error sending resume view notification email:', error);
+      }
     }
 
     return {
@@ -114,7 +118,9 @@ export async function sendResumeViewedEmail(
       message: 'Captured resume view data successfully',
     };
   } catch (error) {
-    console.error('Error capturing resume view data:', error);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error capturing resume view data:', error);
+    }
     return {
       success: false,
       message: 'Failed to capture resume view data',

@@ -33,9 +33,21 @@ export default function Home() {
     const fetchUserIp = async () => {
       try {
         const response = await fetch('https://api.ipify.org?format=json');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const data = await response.json();
-        setUserIp(data.ip);
+        if (data?.ip) {
+          setUserIp(data.ip);
+        }
       } catch (error) {
+        // Fallback: use a default IP or continue without IP tracking
+        // This prevents console errors in production
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Failed to fetch user IP:', error);
+        }
+        // Set fallback IP for analytics
+        setUserIp('0.0.0.0');
       }
     };
 
@@ -75,7 +87,11 @@ export default function Home() {
 
   const breadcrumbItems = [
     { name: "Home", url: "https://www.wilsonkinyua.com" },
-    { name: "Portfolio", url: "https://www.wilsonkinyua.com#projects" }
+    { name: "About", url: "https://www.wilsonkinyua.com#about" },
+    { name: "Services", url: "https://www.wilsonkinyua.com#services" },
+    { name: "Portfolio", url: "https://www.wilsonkinyua.com#projects" },
+    { name: "Resume", url: "https://www.wilsonkinyua.com#resume" },
+    { name: "Contact", url: "https://www.wilsonkinyua.com#contact" }
   ];
 
   return (
@@ -97,7 +113,7 @@ export default function Home() {
             <ReactRotatingText items={['Senior Software Engineer', 'Full Stack Engineer', 'Frontend Engineer', 'Backend Engineer', 'Mobile Apps Engineer', 'Expert in UI/UX Design', 'Technical Lead']} />
           </p>
           <p className="lg:my-10 my-5 leading-10">
-            Dynamic and results-oriented Software Engineer with over 6 years of experience specializing in architecting scalable solutions and leading transformative projects. Proven track record of diagnosing complex challenges, delivering innovative solutions, and fostering collaborative team environments.
+            Dynamic and results-oriented Software Engineer with over 6 years of experience specializing in architecting scalable solutions and leading transformative projects. Proven track record of diagnosing complex challenges, delivering innovative solutions, and fostering collaborative team environments. <Link href="#about" className="text-primary hover:underline">Learn more about my background</Link> and explore my <Link href="#projects" className="text-primary hover:underline">recent projects</Link>.
           </p>
           <div className="lg:flex lg:gap-5 my-10 lg:space-y-0 space-y-3">
             <Button
@@ -166,7 +182,9 @@ export default function Home() {
             mobile app that increased customer retention by 20% and a web
             application that boosted system efficiency by 30%. My expertise
             spans frontend and backend development, UI/UX design, and strategic
-            leadership, consistently driving innovation and excellence.
+            leadership, consistently driving innovation and excellence. Check out my
+            <Link href="#skills" className="text-primary hover:underline ml-1">technical skills</Link> and
+            <Link href="#services" className="text-primary hover:underline ml-1">professional services</Link>.
           </p>
           <ul className="space-y-4 mb-10">
             <li className="flex">
@@ -198,6 +216,10 @@ export default function Home() {
         <h2 className='text-center lg:text-4xl text-2xl my-5'>
           My <span className="text-primary">Special Services</span> For your <br className="lg:block hidden" /> Business <span className="text-primary">Development</span>
         </h2>
+        <p className="text-center mb-8 max-w-3xl mx-auto">
+          Leveraging my <Link href="#skills" className="text-primary hover:underline">diverse skill set</Link> and
+          <Link href="#resume" className="text-primary hover:underline ml-1">professional experience</Link>, I offer comprehensive software development solutions.
+        </p>
         <Services />
       </section>
 
@@ -207,6 +229,11 @@ export default function Home() {
         <h2 className='text-center capitalize lg:text-4xl text-2xl my-5'>
           Real <span className="text-primary">Problem Solutions</span> Experience
         </h2>
+        <p className="text-center mb-8 max-w-3xl mx-auto">
+          My journey combines <Link href="#skills" className="text-primary hover:underline">technical expertise</Link> with
+          practical implementation across various <Link href="#projects" className="text-primary hover:underline ml-1">successful projects</Link>.
+          Interested in working together? <Link href="#contact" className="text-primary hover:underline ml-1">Get in touch</Link>.
+        </p>
         <div className="my-10">
           <Experience />
         </div>
@@ -229,6 +256,11 @@ export default function Home() {
         <h2 className='text-center capitalize lg:text-4xl text-2xl my-5'>
           Explore My Popular <span className="text-primary">Projects</span>
         </h2>
+        <p className="text-center mb-8 max-w-3xl mx-auto">
+          These projects showcase my <Link href="#skills" className="text-primary hover:underline">technical abilities</Link> and
+          <Link href="#services" className="text-primary hover:underline ml-1">service offerings</Link>. Each project demonstrates
+          practical application of my <Link href="#resume" className="text-primary hover:underline ml-1">professional experience</Link>.
+        </p>
         <Projects />
         <a
           href="https://github.com/Wilsonkinyua"
@@ -253,7 +285,10 @@ export default function Home() {
           Frequently Asked <span className="text-primary">Questions</span>
         </h2>
         <p className="text-center mb-10 max-w-2xl mx-auto">
-          Below are answers to some common questions about my services and expertise. If you have other questions, feel free to get in touch.
+          Below are answers to some common questions about my <Link href="#services" className="text-primary hover:underline">services</Link> and
+          <Link href="#skills" className="text-primary hover:underline ml-1">expertise</Link>. For specific project discussions,
+          view my <Link href="#projects" className="text-primary hover:underline ml-1">portfolio</Link> or
+          <Link href="#contact" className="text-primary hover:underline ml-1">contact me directly</Link>.
         </p>
         <FAQ />
       </section>
@@ -270,6 +305,9 @@ export default function Home() {
             </h2>
             <p className="leading-10 my-5">
               Discuss a project or just want to say hi? Connect with me via email or through a phone call.
+              Review my <Link href="#projects" className="text-primary hover:underline">recent work</Link>,
+              explore my <Link href="#services" className="text-primary hover:underline ml-1">services</Link>, or
+              check my <Link href="#resume" className="text-primary hover:underline ml-1">professional background</Link>.
             </p>
             <ul className="space-y-4 mb-10">
               <li className="flex">

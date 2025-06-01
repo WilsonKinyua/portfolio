@@ -15,10 +15,10 @@ import SkipToContent from "@/components/skip-to-content";
 
 export const metadata: Metadata = {
   title: {
-    default: "Wilson Kinyua | Senior Software Engineer & Full Stack Developer in Nairobi, Kenya",
+    default: "Wilson Kinyua | Senior Software Engineer in Nairobi",
     template: "%s | Wilson Kinyua"
   },
-  description: "Wilson Kinyua - Senior Software Engineer with 6+ years experience in React, Next.js, TypeScript, Python, and Laravel. Available for freelance projects and full-time opportunities in Nairobi, Kenya. View portfolio and download resume.",
+  description: "Wilson Kinyua - Senior Software Engineer in Nairobi with 6+ years experience in React, Next.js, TypeScript & Python. Available for projects. View portfolio.",
   metadataBase: new URL("https://www.wilsonkinyua.com"),
   alternates: {
     canonical: "/",
@@ -111,6 +111,8 @@ export default function RootLayout({
         <link rel="preload" href="/img/me.png" as="image" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://api.ipify.org" />
+        <link rel="dns-prefetch" href="https://ipapi.co" />
 
         {/* Preloading key CSS files for faster rendering */}
         <link rel="preload" href="/styles/globals.scss" as="style" />
