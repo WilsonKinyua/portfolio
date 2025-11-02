@@ -44,66 +44,18 @@ type VisitorData = {
   visitedAt: string;
 };
 
-export async function sendResumeViewedEmail(
-  visitorDataString: string
-): Promise<{ success: boolean; message: string }> {
+export async function sendResumeViewedEmail(): Promise<{
+  success: boolean;
+  message: string;
+}> {
   try {
-    // Parse the visitor data from the client
-    const visitorData: VisitorData = JSON.parse(visitorDataString);
-
-    // Now use the IP from client-side to get location information
-    const geoResponse = await fetch(`https://ipapi.co/${visitorData.ip}/json/`);
-    const geoData = await geoResponse.json();
-
-    // Combine the data
-    const locationData = {
-      ip: visitorData.ip,
-      country: geoData.country_name || 'Unknown',
-      region: geoData.region || 'Unknown',
-      city: geoData.city || 'Unknown',
-      latitude: geoData.latitude || 0,
-      longitude: geoData.longitude || 0,
-      timezone: geoData.timezone || 'Unknown',
-      userAgent: visitorData.userAgent,
-      screenSize: visitorData.screenSize,
-      language: visitorData.language,
-      platform: visitorData.platform,
-      referrer: visitorData.referrer,
-      visitedAt: visitorData.visitedAt,
-    };
-
-    // Log this information only in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Resume downloaded by user with the following details:', locationData);
-    }
-
     // Send an email notification about the resume view
     const { data, error } = await resend.emails.send({
       from: 'Resume Viewer Alert <website@wilsonkinyua.com>',
       to: ['wilsonkinyuam@gmail.com'],
-      subject: `👀 Resume viewed from ${locationData.city}, ${locationData.country}`,
+      subject: `👀 Resume viewed`,
       html: `
         <h2>Someone just viewed your resume!</h2>
-        <p>A visitor from <strong>${locationData.city}, ${
-        locationData.region
-      }, ${locationData.country}</strong> has just viewed your resume.</p>
-        <h3>Visitor Details:</h3>
-        <ul>
-          <li><strong>IP Address:</strong> ${locationData.ip}</li>
-          <li><strong>Location:</strong> ${locationData.city}, ${
-        locationData.region
-      }, ${locationData.country}</li>
-          <li><strong>Timezone:</strong> ${locationData.timezone}</li>
-          <li><strong>Date/Time:</strong> ${new Date(
-            locationData.visitedAt
-          ).toLocaleString()}</li>
-          <li><strong>Browser/Device:</strong> ${locationData.userAgent}</li>
-          <li><strong>Screen Size:</strong> ${locationData.screenSize}</li>
-          <li><strong>Language:</strong> ${locationData.language}</li>
-          <li><strong>Platform:</strong> ${locationData.platform}</li>
-          <li><strong>Referrer:</strong> ${locationData.referrer}</li>
-        </ul>
-        <p>This visitor might be a potential recruiter or client interested in your services!</p>
       `,
     });
 

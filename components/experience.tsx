@@ -19,6 +19,34 @@ export default function Experience() {
                         <ol className="relative border-s-4 border-primary-foreground">
                             <li className="mb-10 ms-6">
                                 <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 dark:ring-primary/40 bg-primary animate-bounce">
+                                    <Laptop className="w-4 h-4 text-white" />
+                                </span>
+                                <Card className={`card-glassmorphism p-2`}>
+                                    <CardHeader>
+                                        <CardDescription>
+                                            <p className="flex items-center lg:text-lg font-bold text-primary">Belva Digital</p>
+                                            <p className="flex items-center justify-between my-5 font-semibold lg:text-lg text-xs">
+                                                <span>Senior Frontend Developer</span>
+                                                <time className="block text-sm text-primary/90">Jan 2025 - Present</time>
+                                            </p>
+                                            <Separator className="my-5 bg-primary" />
+                                            <ol className="list-disc list-outside leading-8 ml-4 text-gray-300 text-sm italic">
+                                                <li>
+                                                    Led the development of scalable and responsive frontend applications using Next.js, Vue.js, TypeScript, and Tailwind CSS, enhancing user experience and improving page load times by 35%.
+                                                </li>
+                                                <li>
+                                                    Collaborated with UI/UX designers using Figma to convert wireframes and prototypes into accessible, high-performance web interfaces.
+                                                </li>
+                                                <li>
+                                                    Optimized frontend codebase and applied performance monitoring tools to resolve bottlenecks, resulting in a 25% boost in Lighthouse performance scores.
+                                                </li>
+                                            </ol>
+                                        </CardDescription>
+                                    </CardHeader>
+                                </Card>
+                            </li>
+                            <li className="mb-10 ms-6">
+                                <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 dark:ring-primary/40 bg-primary animate-bounce">
                                     <Phone className="w-4 h-4 text-white" />
                                 </span>
                                 <Card className={`card-glassmorphism p-2`}>

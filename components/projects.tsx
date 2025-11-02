@@ -15,6 +15,30 @@ import Image from "next/image"
 export default function Projects() {
     const projects = [
         {
+            title: 'Newbridge Connect Limited',
+            type: 'Website / CMS',
+            description: 'Newbridge Connect Limited was established in 2010 to serve the global community, specifically by providing language services to Pan-African organizations and entities involved in investments and operations throughout Africa.',
+            image: '/img/projects/12.png',
+            link: 'https://newbridgeconnect.com/',
+            imagePosition: 'right',
+        },
+        {
+            title: 'Humphrey Kariuki',
+            type: 'Portfolio',
+            description: 'Humphrey Kariuki\'s commitment to Africa goes far beyond entrepreneurship. It is grounded in a deep dedication to environmental stewardship, ecosystem restoration, and community well-being.',
+            image: '/img/projects/11.png',
+            link: 'https://humphreykariuki.com/',
+            imagePosition: 'left',
+        },
+        {
+            title: 'Inkomoko',
+            type: 'Website / CMS',
+            description: 'Inkomoko believes in the catalytic power of entrepreneurship, not just as a livelihood tool, but as a pathway to dignity and economic transformation for communities.',
+            image: '/img/projects/10.png',
+            link: 'https://www.inkomoko.com',
+            imagePosition: 'right',
+        },
+        {
             title: 'Dalbit Petroleum Ltd',
             type: 'Website / CMS',
             description: 'Dalbit is a member of the Janus Continental Group (JCG) with presence and operations in nine countries in the Eastern, Central, and Southern African regions.',

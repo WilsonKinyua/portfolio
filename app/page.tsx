@@ -19,7 +19,6 @@ var ReactRotatingText = require('react-rotating-text');
 
 export default function Home() {
   const [transition, startTransition] = useTransition();
-  const [userIp, setUserIp] = useState('');
 
   useEffect(() => {
     AOS.init({
@@ -28,57 +27,13 @@ export default function Home() {
       duration: 700,
       easing: 'ease-out-cubic',
     });
-
-    // Fetch the user's IP address on the client side
-    const fetchUserIp = async () => {
-      try {
-        const response = await fetch('https://api.ipify.org?format=json');
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        if (data?.ip) {
-          setUserIp(data.ip);
-        }
-      } catch (error) {
-        // Fallback: use a default IP or continue without IP tracking
-        // This prevents console errors in production
-        if (process.env.NODE_ENV === 'development') {
-          console.warn('Failed to fetch user IP:', error);
-        }
-        // Set fallback IP for analytics
-        setUserIp('0.0.0.0');
-      }
-    };
-
-    fetchUserIp();
   }, []);
 
   const handleResumeDownload = () => {
     startTransition(async () => {
-      // Capture user agent information and IP address
-      const userAgent = window.navigator.userAgent;
-
-      // Get additional client information
-      const screenWidth = window.screen.width;
-      const screenHeight = window.screen.height;
-      const language = window.navigator.language;
-      const platform = window.navigator.platform;
-      const referrer = document.referrer || 'Direct visit';
-
-      // Create a visitor data object
-      const visitorData = {
-        userAgent,
-        ip: userIp,
-        screenSize: `${screenWidth}x${screenHeight}`,
-        language,
-        platform,
-        referrer,
-        visitedAt: new Date().toISOString(),
-      };
-
+      
       // Send the information to our server action
-      await sendResumeViewedEmail(JSON.stringify(visitorData));
+      await sendResumeViewedEmail();
 
       // Open the resume in a new tab
       window.open('https://drive.google.com/file/d/1NC_D4W6pFaXRXrwu-zx7tRAOxiZoCKhM/view?usp=sharing', '_blank');
