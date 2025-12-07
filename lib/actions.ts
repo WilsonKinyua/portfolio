@@ -43,39 +43,3 @@ type VisitorData = {
   referrer: string;
   visitedAt: string;
 };
-
-export async function sendResumeViewedEmail(): Promise<{
-  success: boolean;
-  message: string;
-}> {
-  try {
-    // Send an email notification about the resume view
-    const { data, error } = await resend.emails.send({
-      from: 'Resume Viewer Alert <website@wilsonkinyua.com>',
-      to: ['wilsonkinyuam@gmail.com'],
-      subject: `👀 Resume viewed`,
-      html: `
-        <h2>Someone just viewed your resume!</h2>
-      `,
-    });
-
-    if (error) {
-      if (process.env.NODE_ENV === 'development') {
-        console.error('Error sending resume view notification email:', error);
-      }
-    }
-
-    return {
-      success: true,
-      message: 'Captured resume view data successfully',
-    };
-  } catch (error) {
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error capturing resume view data:', error);
-    }
-    return {
-      success: false,
-      message: 'Failed to capture resume view data',
-    };
-  }
-}

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: "Wilson Kinyua | Senior Software Engineer in Nairobi",
     template: "%s | Wilson Kinyua"
   },
-  description: "Wilson Kinyua - Senior Software Engineer in Nairobi with 6+ years experience in React, Next.js, TypeScript & Python. Available for projects. View portfolio.",
+  description: "Wilson Kinyua - Senior Software Engineer in Nairobi with 7+ years experience in React, Next.js, TypeScript & Python. Available for projects. View portfolio.",
   metadataBase: new URL("https://www.wilsonkinyua.com"),
   alternates: {
     canonical: "/",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.wilsonkinyua.com/",
     title: "Wilson Kinyua | Professional Software Engineer Portfolio",
-    description: "Driven, innovative Software Engineer with 6+ years experience in frontend, backend, and mobile development. Expert in React, Next.js, TypeScript, Python, and UI/UX design.",
+    description: "Driven, innovative Software Engineer with 7+ years experience in frontend, backend, and mobile development. Expert in React, Next.js, TypeScript, Python, and UI/UX design.",
     siteName: "Wilson Kinyua Portfolio",
     images: [
       {
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Wilson Kinyua | Professional Software Engineer Portfolio",
-    description: "Driven, innovative Software Engineer with 6+ years experience in frontend, backend, and mobile development. Expert in React, Next.js, TypeScript, Python, and UI/UX design.",
+    description: "Driven, innovative Software Engineer with 7+ years experience in frontend, backend, and mobile development. Expert in React, Next.js, TypeScript, Python, and UI/UX design.",
     images: ["https://www.wilsonkinyua.com/img/me.png"],
     creator: "@wilsonkinyuam",
   },
@@ -111,11 +111,6 @@ export default function RootLayout({
         <link rel="preload" href="/img/me.png" as="image" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://api.ipify.org" />
-        <link rel="dns-prefetch" href="https://ipapi.co" />
-
-        {/* Preloading key CSS files for faster rendering */}
-        <link rel="preload" href="/styles/globals.scss" as="style" />
 
         {/* Location-specific metadata */}
         <meta name="geo.region" content="KE" />
@@ -233,7 +228,7 @@ export default function RootLayout({
                   '@type': 'Organization',
                   name: 'Moringa School'
                 },
-                description: 'Enhanced software development curriculum and conducted hands-on coding workshops for 100+ students.'
+                description: 'Enhanced software development curriculum and conducted hands-on coding workshops for 600+ students.'
               },
               {
                 '@type': 'OrganizationRole',

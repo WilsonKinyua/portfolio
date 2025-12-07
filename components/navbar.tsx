@@ -61,7 +61,14 @@ export default function Navbar() {
                             </Link>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
-                            <Link href="#services" legacyBehavior passHref>
+                            <Link href="#case-studies" legacyBehavior passHref>
+                                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                    Case Studies
+                                </NavigationMenuLink>
+                            </Link>
+                        </NavigationMenuItem>
+                        <NavigationMenuItem>
+                            <Link href="#offers" legacyBehavior passHref>
                                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                     Services
                                 </NavigationMenuLink>
@@ -71,20 +78,6 @@ export default function Navbar() {
                             <Link href="#resume" legacyBehavior passHref>
                                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                     Resume
-                                </NavigationMenuLink>
-                            </Link>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <Link href="#skills" legacyBehavior passHref>
-                                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                    Skills
-                                </NavigationMenuLink>
-                            </Link>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <Link href="#projects" legacyBehavior passHref>
-                                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                    Projects
                                 </NavigationMenuLink>
                             </Link>
                         </NavigationMenuItem>
@@ -133,10 +126,11 @@ export default function Navbar() {
                 </NavigationMenu>
                 <div className="lg:hidden flex">
                     <Sheet>
-                        <SheetTrigger>
+                        <SheetTrigger aria-label="Open navigation menu">
                             <Menu
                                 size={24}
                                 className="text-primary"
+                                aria-hidden="true"
                             />
                         </SheetTrigger>
                         <SheetContent
@@ -148,7 +142,7 @@ export default function Navbar() {
                                     className="my-10"
                                 >
                                     <p className="leading-8">
-                                        Driven, innovative Software Engineer with more than 5 years of experience in the development of software and solutions. A conscientious person who pays attention to details.
+                                        Senior Software Engineer with 7+ years of experience building high-performance frontend applications for SaaS and fintech teams.
                                     </p>
                                     <Separator
                                         className="my-10"
@@ -174,7 +168,15 @@ export default function Navbar() {
                                         </li>
                                         <li>
                                             <Link
-                                                href="#services"
+                                                href="#case-studies"
+                                                className="transition duration-500 hover:text-primary"
+                                            >
+                                                Work
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                href="#offers"
                                                 className="transition duration-500 hover:text-primary"
                                             >
                                                 Services
@@ -190,23 +192,8 @@ export default function Navbar() {
                                         </li>
                                         <li>
                                             <Link
-                                                href="#skills"
-                                                className="transition duration-500 hover:text-primary"
-                                            >
-                                                Skills
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link
-                                                href="#projects"
-                                                className="transition duration-500 hover:text-primary"
-                                            >
-                                                Projects
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link
                                                 href="#contact"
+                                                className="transition duration-500 hover:text-primary"
                                             >
                                                 Contact
                                             </Link>

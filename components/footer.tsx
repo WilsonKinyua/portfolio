@@ -19,6 +19,15 @@ export default function Footer() {
                                     About
                                 </Link>
                             </li>
+                            {/* case studies */}
+                            <li>
+                                <Link
+                                    href="#case-studies"
+                                    className="transition duration-500 hover:text-primary"
+                                >
+                                    Case Studies
+                                </Link>
+                            </li>
                             <li>
                                 <Link
                                     href="#services"
@@ -36,26 +45,10 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link
-                                    href="#skills"
+                                <Link href="#faq"
                                     className="transition duration-500 hover:text-primary"
                                 >
-                                    Skills
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="#projects"
-                                    className="transition duration-500 hover:text-primary"
-                                >
-                                    Projects
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="#contact"
-                                >
-                                    Contact
+                                    FAQ
                                 </Link>
                             </li>
                         </ul>
